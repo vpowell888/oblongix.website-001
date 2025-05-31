@@ -5,8 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Solutions | Oblongix</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-bar label {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    .filter-select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid var(--color-light-gray);
+    }
+
+    .solution-card {
+      display: block;
+    }
+
+    .solution-card.hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -31,43 +59,53 @@
 <section class="section">
   <div class="container">
     <h2>Explore Our AI Solutions</h2>
-    <p class="subtitle">A curated set of ready-to-use AI tools that accelerate business outcomes. Click on a solution to learn more and launch it.</p>
+    <p class="subtitle">Choose from a curated set of tools designed for AI-powered business transformation. Filter by solution type:</p>
 
-    <div class="grid-3">
-      <a href="ai-insights-platform.html" class="tile">
+    <div class="filter-bar">
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter" class="filter-select">
+        <option value="ALL">All</option>
+        <option value="AI">AI</option>
+        <option value="AIHUMAN">AI + Human</option>
+        <option value="HUMANAI">Human with AI</option>
+      </select>
+    </div>
+
+    <div class="grid-3" id="solutionsGrid">
+      <a href="ai-insights-platform.html" class="tile solution-card" data-category="AI">
         <img src="images/ai-insights.png" alt="AI Insights Platform" style="width: 100%; border-radius: 8px;">
         <h3>AI Insights Platform</h3>
-        <p>Instant business intelligence dashboards powered by AI. No setup, just insights.</p>
+        <p>Instant dashboards powered by AI. No setup, just insights.</p>
       </a>
 
-      <a href="predictive-forecasting.html" class="tile">
+      <a href="predictive-forecasting.html" class="tile solution-card" data-category="AI">
         <img src="images/predictive-forecasting.png" alt="Predictive Forecasting" style="width: 100%; border-radius: 8px;">
         <h3>Predictive Forecasting</h3>
-        <p>Accurately forecast demand, sales, or churn with data-driven predictive models.</p>
+        <p>Accurate business forecasting using machine learning models.</p>
       </a>
 
-      <a href="automated-qoe.html" class="tile">
+      <a href="automated-qoe.html" class="tile solution-card" data-category="AIHUMAN">
         <img src="images/qoe-solution.png" alt="Automated QoE" style="width: 100%; border-radius: 8px;">
         <h3>Automated Quality of Earnings</h3>
-        <p>Run a Quality of Earnings review in minutes using AI-driven document analysis.</p>
+        <p>AI-powered due diligence with human oversight and context checks.</p>
       </a>
 
-      <a href="customer-churn-ai.html" class="tile">
+      <a href="customer-churn-ai.html" class="tile solution-card" data-category="AI">
         <img src="images/churn-ai.png" alt="Customer Churn Prediction" style="width: 100%; border-radius: 8px;">
         <h3>Customer Churn Prediction</h3>
-        <p>Spot at-risk customers and recommend proactive retention strategies.</p>
+        <p>Identify and retain at-risk customers with explainable AI models.</p>
       </a>
 
-      <a href="smart-tax-copilot.html" class="tile">
+      <a href="smart-tax-copilot.html" class="tile solution-card" data-category="AIHUMAN">
         <img src="images/tax-copilot.png" alt="Smart Tax Copilot" style="width: 100%; border-radius: 8px;">
         <h3>Smart Tax Copilot</h3>
-        <p>Query legislation and tax rules in plain English. Reduce effort and risk in filings.</p>
+        <p>Use AI to navigate tax rules and interpret legislative documents.</p>
       </a>
 
-      <a href="pricing-optimizer.html" class="tile">
+      <a href="pricing-optimizer.html" class="tile solution-card" data-category="HUMANAI">
         <img src="images/pricing-optimizer.png" alt="Pricing Optimizer" style="width: 100%; border-radius: 8px;">
         <h3>Pricing Optimizer</h3>
-        <p>Dynamically suggest optimal pricing using live market and margin data.</p>
+        <p>Enable smarter pricing strategies with AI-assisted human insight.</p>
       </a>
     </div>
   </div>
@@ -107,6 +145,22 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('categoryFilter').addEventListener('change', function () {
+    const selected = this.value;
+    const cards = document.querySelectorAll('.solution-card');
+
+    cards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      if (selected === 'ALL' || category === selected) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+</script>
 
 <script src="app.js"></script>
 </body>
