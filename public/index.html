@@ -18,7 +18,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#insights">Insights</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="javascript:void(0);" onclick="openContactModal()">Contact</a></li>
       </ul>
     </nav>
     <div class="header-actions">
@@ -26,7 +26,6 @@
     </div>
   </div>
 </header>
-
   <section class="hero oblongix-hero">
   <div class="container">
     <h2>Transforming Technology Consulting</h2>
@@ -64,6 +63,19 @@
     </div>
   </div>
 </section>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeContactModal()">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
 
   <div id="signupModal" class="modal">
     <div class="modal-content">

@@ -49,3 +49,34 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   alert('Login initiated. Backend not yet connected.');
   closeLoginModal();
 });
+
+function openContactModal() {
+  document.getElementById('contactModal').style.display = 'block';
+}
+
+function closeContactModal() {
+  document.getElementById('contactModal').style.display = 'none';
+}
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const data = {
+    name: this.elements['name'].value,
+    email: this.elements['email'].value,
+    message: this.elements['message'].value
+  };
+  console.log('Contact message:', data);
+  alert('Your message has been sent. (Simulation — no backend connected)');
+  closeContactModal();
+});
+
+// Allow clicking outside the modal to close
+window.onclick = function (event) {
+  const signupModal = document.getElementById('signupModal');
+  const loginModal = document.getElementById('loginModal');
+  const contactModal = document.getElementById('contactModal');
+  if (event.target === signupModal) closeSignupModal();
+  else if (event.target === loginModal) closeLoginModal();
+  else if (event.target === contactModal) closeContactModal();
+};
+
