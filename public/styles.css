@@ -1,3 +1,4 @@
+
 /* Oblongix Brand Styles - Sophisticated Contrast + Accents Palette */
 :root {
   --color-teal-blue: #42A7C3;
@@ -61,23 +62,30 @@ ul {
   padding: 0 1rem;
 }
 
-/* Default hidden nav for mobile */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
+/* Responsive Navigation */
 .hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
 }
 
-/* Responsive styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--color-deep-navy);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none !important;
     flex-direction: column;
     background-color: white;
     position: absolute;
@@ -89,7 +97,7 @@ ul {
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex !important;
   }
 
   .hamburger {
@@ -101,7 +109,6 @@ ul {
     align-items: center;
   }
 }
-
 
 /* Header and Navigation */
 .oblongix-header {
@@ -119,20 +126,6 @@ ul {
 .logo {
   height: 50px;
   margin-right: 1rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: var(--color-deep-navy);
-  font-weight: 500;
-  font-size: 1rem;
 }
 
 .header-actions button {
@@ -409,4 +402,3 @@ footer a {
 
 .mega-footer a:hover {
   text-decoration: underline;
-}
