@@ -1,15 +1,16 @@
-/* Oblongix Website Brand Theme - Sophisticated Contrast + Accents */
+/* Oblongix Brand Theme - Enhanced Version */
 
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #FDF6EC; /* Cream background */
-  color: #333333; /* Charcoal for body text */
+  background-color: #FDF6EC;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -20,6 +21,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 nav ul {
@@ -32,12 +34,12 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #1A2B4C; /* Deep Navy */
+  color: #1A2B4C;
   font-weight: 600;
 }
 
 button {
-  background-color: #42A7C3; /* Teal Blue */
+  background-color: #42A7C3;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -46,8 +48,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #1A2B4C; /* Deep Navy on hover */
+button:hover,
+button:focus {
+  background-color: #1A2B4C;
+  outline: 2px solid #42A7C3;
+  outline-offset: 2px;
 }
 
 .hero {
@@ -64,7 +69,7 @@ button:hover {
 
 .section {
   padding: 3rem 1rem;
-  background-color: #FFFFFF;
+  background-color: #fff;
   margin-top: 1rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -73,15 +78,48 @@ button:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #1A2B4C; /* Deep Navy */
-  color: #FFFFFF;
+  background-color: #1A2B4C;
+  color: #fff;
 }
 
 footer a {
-  color: #E0E0E0; /* Light Gray */
+  color: #E0E0E0;
   text-decoration: underline;
 }
 
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  background-color: #FF6F61;
+  color: white;
+  font-weight: bold;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #FF6BAA;
+  outline: 2px solid #FF6F61;
+  outline-offset: 2px;
+}
+
+ul li::marker {
+  color: #42A7C3;
+}
+
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -95,7 +133,7 @@ footer a {
 }
 
 .modal-content {
-  background-color: #FFFFFF;
+  background-color: #fff;
   margin: 10% auto;
   padding: 2rem;
   border-radius: 8px;
@@ -113,37 +151,34 @@ footer a {
 
 .close:hover,
 .close:focus {
-  color: #FF6BAA; /* Bubblegum Pink */
-  text-decoration: none;
+  color: #FF6BAA;
   cursor: pointer;
 }
 
-.logo {
-  height: 50px;
-  vertical-align: middle;
-  margin-right: 10px;
-}
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-form input {
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #E0E0E0; /* Light Gray */
-  border-radius: 4px;
-}
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
 
-form button {
-  width: 100%;
-  background-color: #FF6F61; /* Coral */
-  color: white;
-  font-weight: bold;
-}
+  header button {
+    margin-top: 1rem;
+    width: 100%;
+  }
 
-form button:hover {
-  background-color: #FF6BAA; /* Bubblegum Pink */
-}
+  .hero h2 {
+    font-size: 2rem;
+  }
 
-ul li::marker {
-  color: #42A7C3; /* Teal bullet markers */
+  .modal-content {
+    margin: 20% auto;
+    width: 95%;
+  }
 }
