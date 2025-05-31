@@ -341,3 +341,12 @@ textarea:focus {
 .footer-col a:hover {
   text-decoration: underline;
 }
+
+
+.footer-bottom {
+  background-color: var(--color-light-gray);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-charcoal);
+}
