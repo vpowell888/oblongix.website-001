@@ -1,4 +1,8 @@
-// Improved app.js
+function toggleMobileMenu() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("active");
+}
+
 function openSignupModal() {
   document.getElementById('signupModal').style.display = 'block';
 }

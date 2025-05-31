@@ -61,6 +61,48 @@ ul {
   padding: 0 1rem;
 }
 
+/* Default hidden nav for mobile */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-flex {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
 /* Header and Navigation */
 .oblongix-header {
   background-color: var(--color-white);
