@@ -299,15 +299,12 @@ footer {
 }
 
 footer a {
-  color: var(--color-deep-navy);
   margin: 0 0.5rem;
 }
 
 .oblongix-footer {
-  background-color: #F4F6F9;
   padding: 3rem 1rem;
   font-size: 0.95rem;
-  color: var(--color-charcoal);
 }
 
 .footer-grid,
