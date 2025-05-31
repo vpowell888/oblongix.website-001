@@ -146,3 +146,50 @@ textarea:focus {
   border-color: var(--color-teal-blue);
   box-shadow: 0 0 5px rgba(66, 167, 195, 0.5);
 }
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  margin: 5% auto;
+  padding: 2rem;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--color-deep-navy);
+}
+
+.modal-content input {
+  margin-bottom: 1rem;
+}
+
+.modal-content button {
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  color: var(--color-charcoal);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
