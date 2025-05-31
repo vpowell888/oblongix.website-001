@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oblongix | Technology Consulting Redefined</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,9 +47,8 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#register">Register</a></li>
-          <li><a href="#login">Login</a></li>
         </ul>
+        <button onclick="window.location.href='/login.html'">Login</button>
       </nav>
     </div>
   </header>
@@ -25,6 +57,7 @@
     <div class="container">
       <h2>Welcome to Oblongix</h2>
       <p>Leading-edge technology consulting tailored for the next generation of digital transformation.</p>
+      <button onclick="openSignupModal()">Sign Up</button>
     </div>
   </section>
 
@@ -48,30 +81,20 @@
     </div>
   </section>
 
-  <section id="register" class="section">
-    <div class="container">
-      <h2>Register</h2>
-      <p>Use one of our trusted identity providers to register:</p>
-      <div class="login-options">
-        <a class="auth-btn" href="/.auth/login/aad">Register with Azure AD</a>
-        <a class="auth-btn" href="/.auth/login/google">Register with Google</a>
-        <a class="auth-btn" href="/.auth/login/emailauth">Register with Email</a>
-      </div>
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSignupModal()">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Surname" required />
+        <input type="text" placeholder="Company Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Telephone" required />
+        <button type="submit">Start Signup</button>
+      </form>
     </div>
-  </section>
-
-  <section id="login" class="section">
-    <div class="container">
-      <h2>Login</h2>
-      <p>Login using your registered credentials:</p>
-      <div class="login-options">
-        <a class="auth-btn" href="/.auth/login/aad">Login with Azure AD</a>
-        <a class="auth-btn" href="/.auth/login/google">Login with Google</a>
-        <a class="auth-btn" href="/.auth/login/emailauth">Login with Email</a>
-      </div>
-      <a class="auth-btn" href="/.auth/logout">Logout</a>
-    </div>
-  </section>
+  </div>
 
   <footer>
     <div class="container">
@@ -79,6 +102,24 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script>
+    function openSignupModal() {
+      document.getElementById('signupModal').style.display = 'block';
+    }
+    function closeSignupModal() {
+      document.getElementById('signupModal').style.display = 'none';
+    }
+    window.onclick = function (event) {
+      const modal = document.getElementById('signupModal');
+      if (event.target === modal) {
+        closeSignupModal();
+      }
+    }
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Signup process initiated. (Backend integration required)');
+      closeSignupModal();
+    });
+  </script>
 </body>
 </html>
