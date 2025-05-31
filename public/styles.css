@@ -350,3 +350,55 @@ textarea:focus {
   font-size: 0.85rem;
   color: var(--color-charcoal);
 }
+
+.mega-footer {
+  background-color: #111111;
+  color: var(--color-white);
+  padding: 3rem 1rem 2rem;
+  font-size: 0.95rem;
+}
+
+.mega-footer a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.mega-footer a:hover {
+  text-decoration: underline;
+}
+
+.mega-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-white);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo {
+  width: 100px;
+}
+
+.footer-bottom {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-white);
+  margin-top: 2rem;
+}
