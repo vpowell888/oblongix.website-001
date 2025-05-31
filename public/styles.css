@@ -1,5 +1,4 @@
 /* Oblongix Brand Styles - Sophisticated Contrast + Accents Palette */
-
 :root {
   --color-teal-blue: #42A7C3;
   --color-deep-navy: #1A2B4C;
@@ -15,6 +14,7 @@
   --focus-outline-offset: 2px;
 }
 
+/* Base Typography & Layout */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -22,24 +22,6 @@ body {
   color: var(--color-charcoal);
   background-color: var(--color-white);
   line-height: 1.6;
-}
-
-header {
-  background-color: var(--color-deep-navy);
-  color: var(--color-white);
-  padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.logo {
-  height: 50px;
-  margin-right: 1rem;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 h1, h2, h3 {
@@ -73,27 +55,134 @@ ul {
   padding-left: 1.25rem;
 }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header and Navigation */
+.oblongix-header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 1rem 0;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--color-deep-navy);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.header-actions button {
+  background-color: var(--color-teal-blue);
+  color: var(--color-white);
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Optional IBM-Style Blue Bar */
+.ibm-banner {
+  background-color: #0043CE;
+  height: 6px;
+  width: 100%;
+}
+
+/* Hero Section */
+.oblongix-hero {
+  background-color: #F4F6F9;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.oblongix-hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-teal-blue);
+}
+
+.oblongix-hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-buttons .secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-teal-blue);
+  color: var(--color-teal-blue);
+}
+
+/* Section Wrapper */
 .section {
   padding: 2rem 0;
   background-color: var(--color-white);
 }
 
-.hero {
-  background-color: var(--color-cream);
-  padding: 3rem 0;
-  text-align: center;
+/* Service Tiles */
+.oblongix-tiles {
+  background-color: var(--color-white);
+  padding: 3rem 1rem;
 }
 
-.hero h2 {
-  color: var(--color-teal-blue);
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tile {
+  background-color: #F9FAFB;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+}
+
+.tile h3 {
+  color: var(--color-deep-navy);
   margin-bottom: 1rem;
 }
 
-.hero p {
+.tile p {
   color: var(--color-charcoal);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
+/* Footer */
 footer {
   background-color: var(--color-light-gray);
   padding: 1rem 0;
@@ -106,6 +195,7 @@ footer a {
   margin: 0 0.5rem;
 }
 
+/* Buttons */
 button {
   background-color: var(--color-teal-blue);
   color: var(--color-white);
@@ -127,11 +217,14 @@ button:focus {
   outline-offset: var(--focus-outline-offset);
 }
 
+/* Form Inputs */
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="tel"],
 textarea {
   width: 100%;
+  font-size: 1rem;
   padding: 0.75rem;
   margin: 0.5rem 0 1rem 0;
   border: 1px solid var(--color-light-gray);
@@ -147,49 +240,65 @@ textarea:focus {
   box-shadow: 0 0 5px rgba(66, 167, 195, 0.5);
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 0;
-  top: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
   background-color: var(--color-white);
   margin: 5% auto;
-  padding: 2rem;
-  border: 1px solid var(--color-light-gray);
-  border-radius: 8px;
-  max-width: 400px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  padding: 2.5rem;
+  border-radius: 6px;
+  max-width: 480px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   position: relative;
+  font-family: 'Inter', sans-serif;
 }
 
 .modal-content h2 {
-  margin-top: 0;
-  text-align: center;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
   color: var(--color-deep-navy);
+  text-align: left;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal-content label {
+  font-size: 0.85rem;
+  color: var(--color-charcoal);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
 }
 
 .modal-content input {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .modal-content button {
   width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
 }
 
 .close {
   position: absolute;
-  top: 10px;
-  right: 16px;
-  color: var(--color-charcoal);
+  top: 1rem;
+  right: 1.5rem;
   font-size: 1.5rem;
+  color: var(--color-charcoal);
   cursor: pointer;
 }
