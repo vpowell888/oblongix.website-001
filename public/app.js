@@ -1,8 +1,3 @@
-function toggleMobileMenu() {
-  const nav = document.getElementById("navLinks");
-  nav.classList.toggle("active");
-}
-
 function openSignupModal() {
   document.getElementById('signupModal').style.display = 'block';
 }
@@ -83,4 +78,10 @@ window.onclick = function (event) {
   else if (event.target === loginModal) closeLoginModal();
   else if (event.target === contactModal) closeContactModal();
 };
+
+function toggleMobileMenu() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("active");
+}
+
 
