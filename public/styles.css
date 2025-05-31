@@ -302,3 +302,42 @@ textarea:focus {
   color: var(--color-charcoal);
   cursor: pointer;
 }
+/* Footer (IBM Style) */
+.oblongix-footer {
+  background-color: #F4F6F9;
+  padding: 3rem 1rem;
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-charcoal);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  color: var(--color-charcoal);
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
