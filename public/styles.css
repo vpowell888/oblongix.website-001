@@ -1,191 +1,148 @@
-/* Base Typography & Reset */
+/* Oblongix Brand Styles - Sophisticated Contrast + Accents Palette */
+
+:root {
+  --color-teal-blue: #42A7C3;
+  --color-deep-navy: #1A2B4C;
+  --color-coral: #FF6F61;
+  --color-bubblegum-pink: #FF6BAA;
+  --color-light-gray: #E0E0E0;
+  --color-cream: #FDF6EC;
+  --color-charcoal: #333333;
+  --color-white: #FFFFFF;
+
+  /* WCAG-compliant accent variants */
+  --focus-outline: 2px dashed var(--color-teal-blue);
+  --focus-outline-offset: 2px;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background-color: #f5f7f8;
-  color: #161616;
+  padding: 0;
+  color: var(--color-charcoal);
+  background-color: var(--color-white);
   line-height: 1.6;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Header (oblongix-style) */
-.oblongix-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  flex-wrap: wrap;
+header {
+  background-color: var(--color-deep-navy);
+  color: var(--color-white);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo {
-  height: 40px;
+  height: 50px;
+  margin-right: 1rem;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.nav-links a {
-  font-weight: 500;
-  color: #0043ce;
-}
-
-.header-actions button {
-  background-color: #0043ce;
-  color: #fff;
-  padding: 0.5rem 1.2rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.header-actions button:hover {
-  background-color: #002d9c;
-}
-
-/* Hero Section */
-.oblongix-hero {
-  background: linear-gradient(135deg, #0f62fe, #0043ce);
-  color: #ffffff;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.oblongix-hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.oblongix-hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-buttons button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.cta-buttons button:first-child {
-  background-color: #ffffff;
-  color: #0f62fe;
+h1, h2, h3 {
+  color: var(--color-deep-navy);
   font-weight: 600;
 }
 
-.cta-buttons .secondary {
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
+h2 {
+  border-bottom: 2px solid var(--color-light-gray);
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
 }
 
-/* Services Section - Tiles */
-.oblongix-tiles {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
+a {
+  color: var(--color-teal-blue);
+  text-decoration: none;
 }
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.tile {
-  background-color: #f4f4f4;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.tile:hover {
-  background-color: #e0e0e0;
-}
-
-.tile h3 {
-  margin-top: 0;
-  color: #0043ce;
-}
-
-/* Footer */
-.oblongix-footer {
-  background-color: #161616;
-  color: #f4f4f4;
-  padding: 3rem 2rem;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-}
-
-.oblongix-footer h4 {
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-  color: #ffffff;
-}
-
-.oblongix-footer ul li a {
-  font-size: 0.95rem;
-  color: #c6c6c6;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.oblongix-footer ul li a:hover {
+a:hover,
+a:focus {
+  color: var(--color-coral);
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .header-flex {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+a:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
 
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
+ul {
+  padding-left: 1.25rem;
+}
 
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
+.section {
+  padding: 2rem 0;
+  background-color: var(--color-white);
+}
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
+.hero {
+  background-color: var(--color-cream);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  color: var(--color-teal-blue);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--color-charcoal);
+  font-size: 1.1rem;
+}
+
+footer {
+  background-color: var(--color-light-gray);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--color-deep-navy);
+  margin: 0 0.5rem;
+}
+
+button {
+  background-color: var(--color-teal-blue);
+  color: var(--color-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--color-bubblegum-pink);
+}
+
+button:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 4px;
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+}
+
+input:focus,
+textarea:focus {
+  outline: var(--focus-outline);
+  border-color: var(--color-teal-blue);
+  box-shadow: 0 0 5px rgba(66, 167, 195, 0.5);
 }
