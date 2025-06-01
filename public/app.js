@@ -101,4 +101,43 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+  document.getElementById('categoryFilter').addEventListener('change', function () {
+    const selected = this.value;
+    const cards = document.querySelectorAll('.solution-card');
+
+    cards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      if (selected === 'ALL' || category === selected) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+  function applyFilter(category) {
+    const cards = document.querySelectorAll('.solution-card');
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      if (category === 'ALL' || cardCategory === category) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    document.getElementById('categoryFilter').value = category;
+  }
+
+  // Get filter from URL query string
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const initialFilter = params.get('filter') || 'ALL';
+    applyFilter(initialFilter);
+  });
+
+  document.getElementById('categoryFilter').addEventListener('change', function () {
+    applyFilter(this.value);
+  });
+
+
+
 

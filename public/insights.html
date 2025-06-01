@@ -1,6 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oblongix | Business Consulting Redefined by AI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+  <header class="oblongix-header">
+  <div class="container header-flex">
+    <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="logo" />
+    <nav class="navbar">
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      &#9776;
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./solutions.html">Solutions</a></li>
+      <li><a href="./insights.html">Insights</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="javascript:void(0);" onclick="openContactModal()">Contact</a></li>
+    </ul>
+  </nav>
+
+    <div class="header-actions">
+      <button onclick="openLoginModal()">Login</button>
+    </div>
+  </div>
+</header>
+
+  <section class="hero oblongix-hero">
+    <div class="container">
+     <h2>Insights</h2>
+     <p>industry Insights</p>
+    </div>
+  </section>
+
+
 <!-- Repeated Modals and Footer code -->
 
-    <div id="contactModal" class="modal">
+  <div id="contactModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeContactModal()">&times;</span>
       <h2>Contact Us</h2>
@@ -12,22 +55,7 @@
       </form>
     </div>
   </div>
-
-  <div id="signupModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeSignupModal()">&times;</span>
-      <h2>Create Your Account</h2>
-      <form id="signupForm">
-        <input type="text" name="firstName" placeholder="First Name" required />
-        <input type="text" name="surname" placeholder="Surname" required />
-        <input type="text" name="company" placeholder="Company Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="tel" name="phone" placeholder="Telephone" pattern="[0-9]{10,15}" required />
-        <button type="submit">Start Signup</button>
-      </form>
-    </div>
-  </div>
-
+  
   <div id="loginModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeLoginModal()">&times;</span>
@@ -43,12 +71,12 @@
 <footer class="mega-footer">
   <div class="container mega-footer-grid">
     <div class="footer-col">
-      <img src="Oblongix Logo.png" alt="Oblongix Logo" class="footer-logo" />
+      <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="footer-logo" />
     </div>
     <div class="footer-col">
       <h4>Discover</h4>
       <ul>
-        <li><a href="#services">Services</a></li>
+        <li><a href="./solutions.html">Solutions</a></li>
         <li><a href="#insights">Insights</a></li>
       </ul>
     </div>
@@ -73,4 +101,9 @@
       <p>&copy; 2025 Oblongix. All rights reserved.</p>
     </div>
   </div>
-</footer>
+</footer>  
+
+<script src="app.js"></script>
+
+</body>
+</html>

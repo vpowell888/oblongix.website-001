@@ -1,55 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Solutions | Oblongix</title>
+  <title>Oblongix | Business Consulting Redefined by AI</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png" />
-  <style>
-    .filter-bar {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-bottom: 1.5rem;
-    }
-
-    .filter-bar label {
-      font-weight: 600;
-      margin-right: 0.5rem;
-    }
-
-    .filter-select {
-      padding: 0.5rem;
-      font-size: 1rem;
-      border-radius: 4px;
-      border: 1px solid var(--color-light-gray);
-    }
-
-    .solution-card {
-      display: block;
-    }
-
-    .solution-card.hidden {
-      display: none;
-    }
-  </style>
 </head>
+<style>
+  .hidden {
+    display: none !important
+  }
+</style>
 <body>
-
-<header class="oblongix-header">
+  <header class="oblongix-header">
   <div class="container header-flex">
-    <img src="Oblongix Logo.png" alt="Oblongix Logo" class="logo" />
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#insights">Insights</a></li>
-        <li><a href="javascript:void(0);" onclick="openContactModal()">Contact</a></li>
-      </ul>
-    </nav>
+    <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="logo" />
+    <nav class="navbar">
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      &#9776;
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./solutions.html">Solutions</a></li>
+      <li><a href="./insights.html">Insights</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="javascript:void(0);" onclick="openContactModal()">Contact</a></li>
+    </ul>
+  </nav>
+
     <div class="header-actions">
       <button onclick="openLoginModal()">Login</button>
     </div>
@@ -58,60 +39,108 @@
 
 <section class="section">
   <div class="container">
-    <h2>Explore Our AI Solutions</h2>
-    <p class="subtitle">Choose from a curated set of tools designed for AI-powered business transformation. Filter by solution type:</p>
+  <h2>Explore Our AI Solutions</h2>
+  <p class="subtitle">Choose from a curated set of tools designed for AI-powered business transformation. Filter by criteria:</p>
 
-    <div class="filter-bar">
-      <label for="categoryFilter">Category:</label>
-      <select id="categoryFilter" class="filter-select">
-        <option value="ALL">All</option>
-        <option value="AI">AI</option>
-        <option value="AIHUMAN">AI + Human</option>
-        <option value="HUMANAI">Human with AI</option>
-      </select>
-    </div>
+  <div class="filter-bar">
+    <label for="industryFilter">Industry:</label>
+    <select id="industryFilter" class="filter-select">
+      <option value="ALL">All</option>
+      <option value="Finance">Finance</option>
+      <option value="Retail">Retail</option>
+      <option value="Healthcare">Healthcare</option>
+      <option value="Technology">Technology</option>
+    </select>
 
-    <div class="grid-3" id="solutionsGrid">
-      <a href="ai-insights-platform.html" class="tile solution-card" data-category="AI">
-        <img src="images/ai-insights.png" alt="AI Insights Platform" style="width: 100%; border-radius: 8px;">
-        <h3>AI Insights Platform</h3>
-        <p>Instant dashboards powered by AI. No setup, just insights.</p>
-      </a>
+    <label for="SolutionAreaFilter" style="margin-left: 1rem;">Solution Area:</label>
+    <select id="solutionFilter" class="filter-select">
+      <option value="ALL">All</option>
+      <option value="Finance">Finance</option>
+      <option value="ESG">ESG</option>
+      <option value="Technology">Technology</option>
+      <option value="Value Creation">Value Creation</option>
+      <option value="Workforce Talent">Workforce & Talent</option>
+      <option value="Operational Optimisation">Operational Optimisation</option>
+      <option value="Customer Analytics">Customer Analytics</option>
+    </select>
 
-      <a href="predictive-forecasting.html" class="tile solution-card" data-category="AI">
-        <img src="images/predictive-forecasting.png" alt="Predictive Forecasting" style="width: 100%; border-radius: 8px;">
-        <h3>Predictive Forecasting</h3>
-        <p>Accurate business forecasting using machine learning models.</p>
-      </a>
+    <label for="categoryFilter" style="margin-left: 1rem;">Category:</label>
+    <select id="categoryFilter" class="filter-select">
+      <option value="ALL">All</option>
+      <option value="AI">AI</option>
+      <option value="AIHUMAN">AI + Human</option>
+      <option value="HUMANAI">Human with AI</option>
+    </select>
+  </div>
 
-      <a href="automated-qoe.html" class="tile solution-card" data-category="AIHUMAN">
-        <img src="images/qoe-solution.png" alt="Automated QoE" style="width: 100%; border-radius: 8px;">
-        <h3>Automated Quality of Earnings</h3>
-        <p>AI-powered due diligence with human oversight and context checks.</p>
-      </a>
+  <div class="grid-3" id="solutionsGrid">
+    <a href="insights-platform.html" class="tile solution-card" data-category="AI" data-industry="Finance" data-solution="Value Creation">
+      <img src="images/ai-insights.png" alt="AI Insights Platform" style="width: 100%; border-radius: 8px;">
+      <h3>Insights Platform</h3>
+      <p>Dashboards developed in PowerBI using AI for discovery. Rapid setup.</p>
+    </a>
 
-      <a href="customer-churn-ai.html" class="tile solution-card" data-category="AI">
-        <img src="images/churn-ai.png" alt="Customer Churn Prediction" style="width: 100%; border-radius: 8px;">
-        <h3>Customer Churn Prediction</h3>
-        <p>Identify and retain at-risk customers with explainable AI models.</p>
-      </a>
+    <a href="predictive-forecasting.html" class="tile solution-card" data-category="AI" data-industry="Retail" data-solution="Forecasting">
+      <img src="images/predictive-forecasting.png" alt="Predictive Forecasting" style="width: 100%; border-radius: 8px;">
+      <h3>Predictive Forecasting</h3>
+      <p>Accurate business forecasting using machine learning models.</p>
+    </a>
 
-      <a href="smart-tax-copilot.html" class="tile solution-card" data-category="AIHUMAN">
-        <img src="images/tax-copilot.png" alt="Smart Tax Copilot" style="width: 100%; border-radius: 8px;">
-        <h3>Smart Tax Copilot</h3>
-        <p>Use AI to navigate tax rules and interpret legislative documents.</p>
-      </a>
+    <a href="automated-qoe.html" class="tile solution-card" data-category="AIHUMAN" data-industry="Finance" data-solution="Value Creation">
+      <img src="images/qoe-solution.png" alt="Automated QoE" style="width: 100%; border-radius: 8px;">
+      <h3>Automated Quality of Earnings</h3>
+      <p>AI-powered due diligence with human oversight and context checks.</p>
+    </a>
 
-      <a href="pricing-optimizer.html" class="tile solution-card" data-category="HUMANAI">
-        <img src="images/pricing-optimizer.png" alt="Pricing Optimizer" style="width: 100%; border-radius: 8px;">
-        <h3>Pricing Optimizer</h3>
-        <p>Enable smarter pricing strategies with AI-assisted human insight.</p>
-      </a>
-    </div>
+    <a href="customer-churn-ai.html" class="tile solution-card" data-category="AI" data-industry="Retail" data-solution="Customer Analytics">
+      <img src="images/churn-ai.png" alt="Customer Churn Prediction" style="width: 100%; border-radius: 8px;">
+      <h3>Customer Churn Prediction</h3>
+      <p>Identify and retain at-risk customers with explainable AI models.</p>
+    </a>
+
+    <a href="smart-tax-copilot.html" class="tile solution-card" data-category="AIHUMAN" data-industry="Finance" data-solution="Finance">
+      <img src="images/tax-copilot.png" alt="Smart Tax Copilot" style="width: 100%; border-radius: 8px;">
+      <h3>Smart Tax Copilot</h3>
+      <p>Use AI to navigate tax rules and interpret legislative documents.</p>
+    </a>
+
+    <a href="pricing-optimizer.html" class="tile solution-card" data-category="HUMANAI" data-industry="Technology" data-solution="Operational Optimisation">
+      <img src="images/pricing-optimizer.png" alt="Pricing Optimizer" style="width: 100%; border-radius: 8px;">
+      <h3>Pricing Optimizer</h3>
+      <p>Enable smarter pricing strategies with AI-assisted human insight.</p>
+    </a>
   </div>
 </section>
+</div>
+<script>
+  function applyCombinedFilter() {
+    const category = document.getElementById('categoryFilter').value;
+    const industry = document.getElementById('industryFilter').value;
+    const solution = document.getElementById('solutionFilter').value;
+    const cards = document.querySelectorAll('.solution-card');
 
-  <div id="contactModal" class="modal">
+    cards.forEach(card => {
+      const matchCategory = category === 'ALL' || card.getAttribute('data-category') === category;
+      const matchIndustry = industry === 'ALL' || card.getAttribute('data-industry') === industry;
+      const matchSolution = solution === 'ALL' || card.getAttribute('data-solution') === solution;
+
+      if (matchCategory && matchIndustry && matchSolution) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  document.getElementById('categoryFilter').addEventListener('change', applyCombinedFilter);
+  document.getElementById('industryFilter').addEventListener('change', applyCombinedFilter);
+  document.getElementById('solutionFilter').addEventListener('change', applyCombinedFilter);
+
+  window.addEventListener('DOMContentLoaded', applyCombinedFilter);
+</script>
+
+
+<div id="contactModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeContactModal()">&times;</span>
       <h2>Contact Us</h2>
@@ -123,17 +152,29 @@
       </form>
     </div>
   </div>
+  
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
 
 <footer class="mega-footer">
   <div class="container mega-footer-grid">
     <div class="footer-col">
-      <img src="Oblongix Logo.png" alt="Oblongix Logo" class="footer-logo" />
+      <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="footer-logo" />
     </div>
     <div class="footer-col">
       <h4>Discover</h4>
       <ul>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#insights">Insights</a></li>
+        <li><a href="./solutions.html">Solutions</a></li>
+        <li><a href="#insights">Insights</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -157,47 +198,9 @@
       <p>&copy; 2025 Oblongix. All rights reserved.</p>
     </div>
   </div>
-</footer>
-
-<script>
-  document.getElementById('categoryFilter').addEventListener('change', function () {
-    const selected = this.value;
-    const cards = document.querySelectorAll('.solution-card');
-
-    cards.forEach(card => {
-      const category = card.getAttribute('data-category');
-      if (selected === 'ALL' || category === selected) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-  });
-  function applyFilter(category) {
-    const cards = document.querySelectorAll('.solution-card');
-    cards.forEach(card => {
-      const cardCategory = card.getAttribute('data-category');
-      if (category === 'ALL' || cardCategory === category) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-    document.getElementById('categoryFilter').value = category;
-  }
-
-  // Get filter from URL query string
-  window.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const initialFilter = params.get('filter') || 'ALL';
-    applyFilter(initialFilter);
-  });
-
-  document.getElementById('categoryFilter').addEventListener('change', function () {
-    applyFilter(this.value);
-  });
-</script>
+</footer>  
 
 <script src="app.js"></script>
+
 </body>
 </html>

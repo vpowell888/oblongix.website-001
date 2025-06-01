@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms and Cookies | Oblongix</title>
+  <title>Oblongix | Business Consulting Redefined by AI</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png" />
-  <meta name="description" content="Terms of Use and Cookie Policy for Oblongix, a forward-thinking IT consultancy." />
-  <meta name="author" content="Oblongix" />
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div style="display: flex; align-items: center;">
-        <img src="Oblongix%20Logo.png" alt="Oblongix Logo" class="logo">
-        <h1 style="margin-left: 10px;">Terms of Use & Cookie Policy</h1>
-      </div>
+  <header class="oblongix-header">
+  <div class="container header-flex">
+    <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="logo" />
+    <nav class="navbar">
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      &#9776;
     </div>
-  </header>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./solutions.html">solutions</a></li>
+      <li><a href="./insights.html">Insights</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="javascript:void(0);" onclick="openContactModal()">Contact</a></li>
+    </ul>
+  </nav>
+
+    <div class="header-actions">
+      <button onclick="openLoginModal()">Login</button>
+    </div>
+  </div>
+</header>
 
   <section class="section">
     <div class="container">
@@ -55,16 +69,48 @@
       <p>You can set your browser not to accept cookies, and the websites <a href="https://www.allaboutcookies.org">www.allaboutcookies.org</a> and <a href="https://www.youronlinechoices.eu">www.youronlinechoices.eu</a> provide guidance on how to manage and delete cookies.</p>
 
       <h2>Contact</h2>
-      <p>If you have any questions about these terms or our use of cookies, contact us at <a href="mailto:office@oblongix.com">office@oblongix.com</a>.</p>
+      <p>If you have any questions about these terms or our use of cookies, contact us at <a href="mailto:oblongix@oblongix.com">oblongix@oblongix.com</a>.</p>
 
       <p><a href="index.html">Back to home</a></p>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Oblongix. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+  <footer class="mega-footer">
+  <div class="container mega-footer-grid">
+    <div class="footer-col">
+      <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="footer-logo" />
     </div>
-  </footer>
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="./solutions.html">Solutions</a></li>
+        <li><a href="#insights">Insights</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect with Us</h4>
+      <ul>
+        <li><a href="javascript:void(0);" onclick="openContactModal()">Contact Support</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms and cookies.html">Terms & Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2025 Oblongix. All rights reserved.</p>
+    </div>
+  </div>
+</footer>  
+
+<script src="app.js"></script>
+
 </body>
 </html>

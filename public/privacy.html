@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | Oblongix</title>
+  <title>Oblongix | Business Consulting Redefined by AI</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png" />
-  <meta name="description" content="Privacy Policy for Oblongix, a leading-edge IT consultancy." />
-  <meta name="author" content="Oblongix" />
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div style="display: flex; align-items: center;">
-        <img src="Oblongix%20Logo.png" alt="Oblongix Logo" class="logo">
-        <h1 style="margin-left: 10px;">Privacy Statement</h1>
-      </div>
+  <header class="oblongix-header">
+  <div class="container header-flex">
+    <img src="Oblongix Logo.png" alt="Oblongix Logo" class="logo" />
+    <nav class="navbar">
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      &#9776;
     </div>
-  </header>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./solutions.html">Solutions</a></li>
+      <li><a href="./insights.html">Insights</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="javascript:void(0);" onclick="openContactModal()">Contact</a></li>
+    </ul>
+  </nav>
+
+    <div class="header-actions">
+      <button onclick="openLoginModal()">Login</button>
+    </div>
+  </div>
+</header>
 
   <section class="section">
     <div class="container">
-      <p>At Oblongix, we take your privacy seriously. We're responsible for handling your personal data (referred to in this policy as "we", "us", or "our"). We collect and process personal information when you visit our website, get in touch about our services, or sign up to receive marketing updates.</p>
+      <h1>Privacy</h1>
+      <p>At Oblongix, we take your privacy seriously. We're responsible for handling your personal data (referred to here as "we", "us", or "our").</p>
+      <p>We collect and process personal information when you visit our website, get in touch about our services, or sign up to receive marketing updates.</p>
 
       <p>This privacy statement explains what information we collect, how we use it, and what your rights are.</p>
 
@@ -54,10 +70,67 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Oblongix. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms and cookies.html">Terms of Use, and use of Cookies</a></p>
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeContactModal()">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
-  </footer>
+  </div>
+  
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+<footer class="mega-footer">
+  <div class="container mega-footer-grid">
+    <div class="footer-col">
+      <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="footer-logo" />
+    </div>
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="./solutions.html">Solutions</a></li>
+        <li><a href="#insights">Insights</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect with Us</h4>
+      <ul>
+        <li><a href="javascript:void(0);" onclick="openContactModal()">Contact Support</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms and cookies.html">Terms & Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2025 Oblongix. All rights reserved.</p>
+    </div>
+  </div>
+</footer>  
+
+<script src="app.js"></script>
+
 </body>
 </html>

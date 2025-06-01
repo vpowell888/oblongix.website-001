@@ -86,7 +86,7 @@ ul {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: white;
+    background-color: var(--color-cream);
     padding: 1rem;
     border: 1px solid #ddd;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -104,7 +104,7 @@ ul {
 
 /* Header and Navigation */
 .oblongix-header {
-  background-color: var(--color-white);
+  background-color: var(--color-cream);
   border-bottom: 1px solid var(--color-light-gray);
   padding: 1rem 0;
 }
@@ -132,7 +132,7 @@ ul {
 
 /* Hero Section */
 .oblongix-hero {
-  background-color: #F4F6F9;
+  background-color:var(--color-light-gray);
   padding: 4rem 1rem;
   text-align: center;
 }
@@ -164,13 +164,13 @@ ul {
 
 /* Section Wrapper */
 .section {
-  padding: 2rem 0;
-  background-color: var(--color-white);
+  padding: 3rem 1rem;
+  background-color: var(--color-cream);
 }
 
 /* Service Tiles */
 .oblongix-tiles {
-  background-color: var(--color-white);
+  background-color: var(--color-cream);
   padding: 3rem 1rem;
 }
 
@@ -181,7 +181,7 @@ ul {
 }
 
 .tile {
-  background-color: #F9FAFB;
+  background-color: var(--color-light-gray);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
@@ -189,8 +189,8 @@ ul {
 }
 
 .tile-pressed {
-  background-color: var(--color-charcoal) !important;
-  color: var(--color-white);
+  background-color: var(--color-teal) !important;
+  color: var(--color-cream);
   transition: background-color 0.1s ease;
 }
 
@@ -199,8 +199,9 @@ ul {
 }
 
 .tile h3 {
-  color: var(--color-deep-navy);
+  color: var(--color-teal);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .tile p {
@@ -306,6 +307,32 @@ textarea:focus {
   cursor: pointer;
 }
 
+.filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-bar label {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    .filter-select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid var(--color-light-gray);
+    }
+
+    .solution-card {
+      display: block;
+    }
+
+    .solution-card.hidden {
+      display: none;
+    }
 /* Footer */
 footer {
   background-color: var(--color-light-gray);
