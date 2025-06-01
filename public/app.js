@@ -84,4 +84,21 @@ function toggleMobileMenu() {
   nav.classList.toggle("active");
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const tiles = document.querySelectorAll('.tile');
+
+  tiles.forEach(tile => {
+    tile.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default link action
+      tile.classList.add('tile-pressed');
+
+      setTimeout(() => {
+        tile.classList.remove('tile-pressed');
+        window.location.href = tile.href; // Navigate after effect
+      }, 150); // Delay to simulate press
+    });
+  });
+});
+
+
 
