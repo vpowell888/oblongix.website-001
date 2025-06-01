@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<section class="section">
+  <div class="container">
+    <a href="/solutions" class="idea-button">← Back to All Solutions</a>
+
+    <h1><%= solution.title %></h1>
+    
+    <% if (solution.subtitle) { %>
+      <p class="subtitle"><%= solution.subtitle %></p>
+    <% } %>
+
+    <hr />
+
+    <div class="content-block">
+      <h2>1. Description</h2>
+      <p><%= solution.description %></p>
+    </div>
+
+    <div class="content-block">
+      <h2>2. When to Use</h2>
+      <p><%= solution.whenToUse %></p>
+    </div>
+
+    <div class="content-block">
+      <h2>3. Detailed Explanation of What to Do</h2>
+      <ul>
+        <% solution.steps.forEach(step => { %>
+          <li><strong><%= step.title %></strong>: <%= step.detail %></li>
+        <% }) %>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h2>4. Data Sources Used</h2>
+      <ul>
+        <% solution.dataSources.forEach(source => { %>
+          <li><%= source %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,11 +1,14 @@
 <%- include('partials/header') %>
-  <section class="section">
-    <div class="container">
-      <div class="idea-button-container">
-          <a href="submit-idea.html" class="idea-button">Submit New Product Idea</a>
-      </div>
-      <h2>Explore Our AI Solutions</h2>
-      <p class="subtitle">Choose from a curated set of tools designed for AI-powered business transformation. Filter by criteria:</p>
+
+<section class="section">
+  <div class="container">
+
+    <div class="idea-button-container">
+      <a href="submit-idea.html" class="idea-button">Submit New Product Idea</a>
+    </div>
+
+    <h2>Explore Our AI Solutions</h2>
+    <p class="subtitle">Choose from a curated set of tools designed for AI-powered business transformation. Filter by criteria:</p>
 
     <div class="filter-bar">
       <div class="filter-group">
@@ -45,101 +48,63 @@
       </div>
     </div>
 
-  <div class="grid-3" id="solutionsGrid">
-    <% solutions.forEach((item, index) => { %>
-      <div class="tile solution-card" 
-          data-category="<%= item.category %>" 
-          data-industry="<%= item.industry %>" 
-          data-solution="<%= item.solutionArea %>" 
-          data-link="<%= item.link %>">
-
-        <!-- Unique ref number (top-right) -->
-        <div class="tile-ref-number">
-          #<%= index + 1 %>
-        </div>
-
-        <div class="card-content">
-          <h3><%= item.title %></h3>
-          <p><%= item.description %></p>
-
-          <!-- Feedback button (bottom-left) -->
-          <button class="feedback-btn"
-                  data-solution-id="<%= item.id || index %>"
-                  data-solution-title="<%= item.title %>">
-            Feedback
-          </button>
-
-          <!-- Interest score (bottom-right) -->
-          <div class="interest-score">
-            <%= item.interestScore || 0 %>
+    <div class="grid-3" id="solutionsGrid">
+      <% solutions.forEach((item, index) => { %>
+        <div class="tile solution-card" 
+            data-category="<%= item.category %>" 
+            data-industry="<%= item.industry %>" 
+            data-solution="<%= item.solutionArea %>" 
+            data-link="<%= item.link %>">
+          <div class="tile-ref-number">#<%= index + 1 %></div>
+          <div class="card-content">
+            <h3><%= item.title %></h3>
+            <p><%= item.description %></p>
           </div>
         </div>
-      </div>
-    <% }); %>
-  </div>
-  </section>
-
-  <div id="feedbackModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeFeedbackModal()">&times;</span>
-      <h2>Give Feedback</h2>
-      <p id="feedbackSolutionTitle"></p>
-      <textarea id="feedbackText" placeholder="Your feedback..." rows="5" required></textarea>
-      <button onclick="submitFeedback()">Submit</button>
+      <% }); %>
     </div>
   </div>
+</section>
 
 <%- include('partials/contact_modal') %>
 <%- include('partials/login_modal') %>
+
 <script>
-  let currentFeedbackSolutionId = null;
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentFeedbackSolutionId = null;
 
-  // Open feedback modal from card
-  document.querySelectorAll('.feedback-btn').forEach(button => {
-    button.addEventListener('click', (event) => {
-      event.stopPropagation(); // Prevent triggering card click
-      event.preventDefault();
+    document.querySelectorAll('.solution-card').forEach(tile => {
+      tile.addEventListener('click', (e) => {
+        if (e.target.closest('.feedback-btn')) return;
 
-      const solutionId = button.getAttribute('data-solution-id');
-      const solutionTitle = button.getAttribute('data-solution-title');
-
-      currentFeedbackSolutionId = solutionId;
-
-      document.getElementById('feedbackSolutionTitle').textContent = solutionTitle;
-      document.getElementById('feedbackText').value = '';
-      document.getElementById('feedbackModal').style.display = 'block';
-    });
-  });
-
-  // Close feedback modal
-  function closeFeedbackModal() {
-    document.getElementById('feedbackModal').style.display = 'none';
-  }
-
-  // Submit feedback (dummy function)
-  function submitFeedback() {
-    const feedback = document.getElementById('feedbackText').value;
-    if (!feedback.trim()) {
-      alert("Please enter feedback before submitting.");
-      return;
-    }
-
-    console.log("Submitted feedback:", {
-      solutionId: currentFeedbackSolutionId,
-      feedback: feedback
+        const link = tile.getAttribute('data-link');
+        if (link) {
+          window.location.href = link;
+        }
+      });
     });
 
-    // You could replace this with a fetch/POST call
-    alert("Feedback submitted! Thank you.");
-    closeFeedbackModal();
-  }
-
-  // Optional: close modal when clicking outside
-  window.addEventListener('click', (event) => {
-    const modal = document.getElementById('feedbackModal');
-    if (event.target === modal) {
-      closeFeedbackModal();
+    
+    function applyFilter(category) {
+      const cards = document.querySelectorAll('.solution-card');
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'ALL' || cardCategory === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      document.getElementById('categoryFilter').value = category;
     }
+
+    const params = new URLSearchParams(window.location.search);
+    const initialFilter = params.get('filter') || 'ALL';
+    applyFilter(initialFilter);
+
+    document.getElementById('categoryFilter').addEventListener('change', function () {
+      applyFilter(this.value);
+    });
   });
 </script>
 

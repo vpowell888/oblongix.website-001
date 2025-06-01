@@ -1,0 +1,44 @@
+{
+  "title": "Inventory Execution Excellence Framework",
+  "subtitle": null,
+  "description": "The Inventory Execution Excellence Framework provides a structured, end-to-end roadmap...",
+  "whenToUse": "Use this framework when a company has already identified inventory inefficiencies...",
+  "steps": [
+    {
+      "title": "Step 1: Align on Strategy and Inventory Targets",
+      "detail": "Establish business-wide objectives for inventory levels, working capital..."
+    },
+    {
+      "title": "Step 2: Conduct SKU Segmentation and Classification",
+      "detail": "Segment SKUs using ABC or XYZ analysis..."
+    },
+    {
+      "title": "Step 3: Map Current Replenishment and Ordering Processes",
+      "detail": "Identify how inventory levels are currently planned, ordered..."
+    },
+    {
+      "title": "Step 4: Redesign Policies and Parameters",
+      "detail": "Using demand forecasting and lead time variability..."
+    },
+    {
+      "title": "Step 5: Embed Changes in Systems and Workflows",
+      "detail": "Implement new inventory logic in ERP or planning systems..."
+    },
+    {
+      "title": "Step 6: Cross-Functional Governance and Change Management",
+      "detail": "Create cross-departmental inventory councils..."
+    },
+    {
+      "title": "Step 7: Track, Monitor, and Course Correct",
+      "detail": "Establish dashboards to track fill rates, turnover, inventory days..."
+    }
+  ],
+  "dataSources": [
+    "Internal ERP data (SKU master, stock levels, order history)",
+    "Sales and demand forecasting data",
+    "Supply chain planning systems (e.g., SAP APO, Oracle Demantra)",
+    "Operations SOPs and replenishment process documentation",
+    "Public or proprietary inventory benchmarks",
+    "System configuration and automation logic (where inventory logic resides)"
+  ]
+}

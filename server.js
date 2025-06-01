@@ -4,6 +4,7 @@ const path = require('path');
 
 const appSettings = require('./config/appSettings.json');
 const Solutions = require('./config/solutions.json');
+const solutionDetails = require('./config/solutionDetails.json');
 
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, 'views')); 
@@ -27,6 +28,17 @@ app.get('/solutions', (req, res) => {
       categories : appSettings.categories,
       solutions: Solutions.solutions
     });
+});
+
+app.get('/solutions/:id', (req, res) => {
+  const solutionId = req.params.id;
+  const solution = solutionDetails.find(item => item.id === solutionId);
+
+  if (!solution) {
+    return res.status(404).send('Solution not found');
+  }
+
+  res.render('solution-detail', { solution });
 });
 
 app.get('/insights', (req, res) => {
