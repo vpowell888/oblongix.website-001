@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+const appSettings = require('./config/appSettings.json');
+const Solutions = require('./config/solutions.json');
+
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, 'views')); 
 
@@ -16,7 +19,14 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/solutions', (req, res) => {
-  res.render('solutions', { title: 'Solutions' });
+  res.render('solutions', {
+      title: 'Solutions',
+      lifecycleStages: appSettings.lifecycleStages,
+      industries: appSettings.industries,
+      solutionareas: appSettings.solutionareas,
+      categories : appSettings.categories,
+      solutions: Solutions.solutions
+    });
 });
 
 app.get('/insights', (req, res) => {

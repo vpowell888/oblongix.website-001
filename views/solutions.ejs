@@ -11,509 +11,71 @@
       <div class="filter-group">
         <label for="statusFilter">Product Stage:</label>
         <select id="statusFilter" class="filter-select">
-          <option value="ALL">All</option>
-          <option value="Ideas">Ideas</option>
-          <option value="Scoping">Scoping</option>
-          <option value="Market Validation">Market Validation</option>
-          <option value="Go-to-Market Plan">Go-to-Market Plan</option>
-          <option value="MVP Build">MVP Build</option>
-          <option value="Private Preview">Private Preview</option>
-          <option value="Public Preview">Public Preview</option>
-          <option value="General Availability">General Availability</option>
-          <option value="Sustain & Iterate">Sustain & Iterate</option>
-          <option value="Sunset Plan">Sunset Plan</option>
-          <option value="Sunset">Sunset</option>
+          <% lifecycleStages.forEach(stage => { %>
+            <option value="<%= stage.value %>"><%= stage.label %></option>
+          <% }); %>
         </select>
       </div>
 
       <div class="filter-group">
         <label for="industryFilter">Industry:</label>
         <select id="industryFilter" class="filter-select">
-          <option value="ALL">All</option>
-          <option value="Finance">Finance</option>
-          <option value="Retail">Retail</option>
-          <option value="Healthcare">Healthcare</option>
-          <option value="Technology">Technology</option>
+          <% industries.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
         </select>
       </div>
 
       <div class="filter-group">
         <label for="solutionFilter">Solution Area:</label>
         <select id="solutionFilter" class="filter-select">
-          <option value="ALL">All</option>
-          <option value="Finance">Finance</option>
-          <option value="ESG">ESG</option>
-          <option value="Technology">Technology</option>
-          <option value="Value Creation">Value Creation</option>
-          <option value="Workforce Talent">Workforce & Talent</option>
-          <option value="Operational Optimisation">Operational Optimisation</option>
-          <option value="Customer Analytics">Customer Analytics</option>
+          <% solutionareas.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
         </select>
       </div>
 
       <div class="filter-group">
         <label for="categoryFilter">Category:</label>
         <select id="categoryFilter" class="filter-select">
-          <option value="ALL">All</option>
-          <option value="AI">AI</option>
-          <option value="AIHUMAN">AI + Human</option>
-          <option value="HUMANAI">Human with AI</option>
+          <% categories.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
         </select>
       </div>
     </div>
 
+  <div class="grid-3" id="solutionsGrid">
+    <% solutions.forEach((item, index) => { %>
+      <div class="tile solution-card" 
+          data-category="<%= item.category %>" 
+          data-industry="<%= item.industry %>" 
+          data-solution="<%= item.solutionArea %>" 
+          data-link="<%= item.link %>">
 
-    <div class="grid-3" id="solutionsGrid">
+        <!-- Unique ref number (top-right) -->
+        <div class="tile-ref-number">
+          #<%= index + 1 %>
+        </div>
 
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="inventory-optimisation.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">001</div>
-        <img src="images/inventory-optimisation.png" alt="Inventory Optimisation" >
-        <h3>Inventory Optimisation</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
+        <div class="card-content">
+          <h3><%= item.title %></h3>
+          <p><%= item.description %></p>
+
+          <!-- Feedback button (bottom-left) -->
+          <button class="feedback-btn"
+                  data-solution-id="<%= item.id || index %>"
+                  data-solution-title="<%= item.title %>">
+            Feedback
+          </button>
+
+          <!-- Interest score (bottom-right) -->
+          <div class="interest-score">
+            <%= item.interestScore || 0 %>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="inventory-execution-excellence-framework.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">002</div>
-        <img src="images/inventory-execution-excellence-framework.png" alt="Inventory Execution Excellence Framework" >
-        <h3>Inventory Execution Excellence Framework</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="strategic-capex-planning-blueprint.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">003</div>
-        <img src="images/strategic-capex-planning-blueprint.png" alt="Strategic CapEx Planning Blueprint" >
-        <h3>Strategic CapEx Planning Blueprint</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="organizational-leverage-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">004</div>
-        <img src="images/organizational-leverage-diagnostic.png" alt="Organizational Leverage Diagnostic" >
-        <h3>Organizational Leverage Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="workforce-sentiment-intelligence-engine.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">005</div>
-        <img src="images/workforce-sentiment-intelligence-engine.png" alt="Workforce Sentiment Intelligence Engine" >
-        <h3>Workforce Sentiment Intelligence Engine</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="lean-ganda-performance-benchmark.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">006</div>
-        <img src="images/lean-ganda-performance-benchmark.png" alt="Lean G&A Performance Benchmark" >
-        <h3>Lean G&A Performance Benchmark</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="network-footprint-optimization-model.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">007</div>
-        <img src="images/network-footprint-optimization-model.png" alt="Network Footprint Optimization Model" >
-        <h3>Network Footprint Optimization Model</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="strategic-sourcing-and-supplier-spend-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">008</div>
-        <img src="images/strategic-sourcing-and-supplier-spend-diagnostic.png" alt="Strategic Sourcing and Supplier Spend Diagnostic" >
-        <h3>Strategic Sourcing and Supplier Spend Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="supply-chain-risk-and-trade-exposure-assessment.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">009</div>
-        <img src="images/supply-chain-risk-and-trade-exposure-assessment.png" alt="Supply Chain Risk and Trade Exposure Assessment" >
-        <h3>Supply Chain Risk and Trade Exposure Assessment</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="cost-to-serve-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">010</div>
-        <img src="images/cost-to-serve-diagnostic.png" alt="Cost to Serve Diagnostic" >
-        <h3>Cost to Serve Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="integrated-cost-to-serve-optimization-playbook.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">011</div>
-        <img src="images/integrated-cost-to-serve-optimization-playbook.png" alt="Integrated Cost-to-Serve Optimization Playbook" >
-        <h3>Integrated Cost-to-Serve Optimization Playbook</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="freight-margin-recovery-and-logistics-cost-efficiency-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">012</div>
-        <img src="images/freight-margin-recovery-and-logistics-cost-efficiency-diagnostic.png" alt="Freight Margin Recovery and Logistics Cost Efficiency Diagnostic" >
-        <h3>Freight Margin Recovery and Logistics Cost Efficiency Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="operational-throughput-and-manufacturing-efficiency-dashboard.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">013</div>
-        <img src="images/operational-throughput-and-manufacturing-efficiency-dashboard.png" alt="Operational Throughput and Manufacturing Efficiency Dashboard" >
-        <h3>Operational Throughput and Manufacturing Efficiency Dashboard</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="localized-market-penetration-and-growth-opportunity-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">014</div>
-        <img src="images/localized-market-penetration-and-growth-opportunity-diagnostic.png" alt="Localized Market Penetration and Growth Opportunity Diagnostic" >
-        <h3>Localized Market Penetration and Growth Opportunity Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="end-to-end-market-expansion-planning-suite.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">015</div>
-        <img src="images/end-to-end-market-expansion-planning-suite.png" alt="End-to-End Market Expansion Planning Suite" >
-        <h3>End-to-End Market Expansion Planning Suite</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="digital-channel-performance-and-traffic-benchmark-suite.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">016</div>
-        <img src="images/digital-channel-performance-and-traffic-benchmark-suite.png" alt="Digital Channel Performance and Traffic Benchmark Suite" >
-        <h3>Digital Channel Performance and Traffic Benchmark Suite</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="brand-perception-and-social-signal-intelligence-dashboard.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">017</div>
-        <img src="images/brand-perception-and-social-signal-intelligence-dashboard.png" alt="Brand Perception and Social Signal Intelligence Dashboard" >
-        <h3>Brand Perception and Social Signal Intelligence Dashboard</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="microeconomics-of-growth-and-location-roi-modeling.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">018</div>
-        <img src="images/microeconomics-of-growth-and-location-roi-modeling.png" alt="Microeconomics of Growth and Location ROI Modeling" >
-        <h3>Microeconomics of Growth and Location ROI Modeling</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="ai-powered-location-performance-forecasting-engine.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">019</div>
-        <img src="images/ai-powered-location-performance-forecasting-engine.png" alt="AI-Powered Location Performance Forecasting Engine" >
-        <h3>AI-Powered Location Performance Forecasting Engine</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="sku-margin-intelligence-and-rationalization-framework.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">020</div>
-        <img src="images/sku-margin-intelligence-and-rationalization-framework.png" alt="SKU Margin Intelligence and Rationalization Framework" >
-        <h3>SKU Margin Intelligence and Rationalization Framework</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="card-spend-insights-and-purchase-behavior-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">021</div>
-        <img src="images/card-spend-insights-and-purchase-behavior-diagnostic.png" alt="Card Spend Insights and Purchase Behavior Diagnostic" >
-        <h3>Card Spend Insights and Purchase Behavior Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="retail-network-growth-and-regional-sales-benchmark-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">022</div>
-        <img src="images/retail-network-growth-and-regional-sales-benchmark-diagnostic.png" alt="Retail Network Growth and Regional Sales Benchmark Diagnostic" >
-        <h3>Retail Network Growth and Regional Sales Benchmark Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="customer-voice-and-behavioral-insight-framework.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">023</div>
-        <img src="images/customer-voice-and-behavioral-insight-framework.png" alt="Customer Voice and Behavioral Insight Framework" >
-        <h3>Customer Voice and Behavioral Insight Framework</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="g.-dynata-toluna-surveymonkey-audience.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">024</div>
-        <img src="images/g.-dynata-toluna-surveymonkey-audience.png" alt="g., Dynata, Toluna, SurveyMonkey Audience)" >
-        <h3>g., Dynata, Toluna, SurveyMonkey Audience)</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="new-store-ramp-curve-optimization-and-uplift-strategy-model.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">025</div>
-        <img src="images/new-store-ramp-curve-optimization-and-uplift-strategy-model.png" alt="New Store Ramp Curve Optimization & Uplift Strategy Model" >
-        <h3>New Store Ramp Curve Optimization & Uplift Strategy Model</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="predictive-customer-lifetime-value-clv-and-retention-strategy-engine.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">026</div>
-        <img src="images/predictive-customer-lifetime-value-clv-and-retention-strategy-engine.png" alt="Predictive Customer Lifetime Value (CLV) and Retention Strategy Engine" >
-        <h3>Predictive Customer Lifetime Value (CLV) and Retention Strategy Engine</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="end-to-end-profitability-driver-tree-and-margin-impact-model.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">027</div>
-        <img src="images/end-to-end-profitability-driver-tree-and-margin-impact-model.png" alt="End-to-End Profitability Driver Tree and Margin Impact Model" >
-        <h3>End-to-End Profitability Driver Tree and Margin Impact Model</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="customer-retention-and-churn-risk-analytics-engine.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">028</div>
-        <img src="images/customer-retention-and-churn-risk-analytics-engine.png" alt="Customer Retention and Churn Risk Analytics Engine" >
-        <h3>Customer Retention and Churn Risk Analytics Engine</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="enterprise-churn-strategy-framework-and-predictive-intervention-model.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">029</div>
-        <img src="images/enterprise-churn-strategy-framework-and-predictive-intervention-model.png" alt="Enterprise Churn Strategy Framework and Predictive Intervention Model" >
-        <h3>Enterprise Churn Strategy Framework and Predictive Intervention Model</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="white-space-opportunity-mapping-and-demand-gap-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">030</div>
-        <img src="images/white-space-opportunity-mapping-and-demand-gap-diagnostic.png" alt="White Space Opportunity Mapping and Demand Gap Diagnostic" >
-        <h3>White Space Opportunity Mapping and Demand Gap Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="revenue-expansion-and-offer-mix-optimization-engine.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">031</div>
-        <img src="images/revenue-expansion-and-offer-mix-optimization-engine.png" alt="Revenue Expansion and Offer Mix Optimization Engine" >
-        <h3>Revenue Expansion and Offer Mix Optimization Engine</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="strategic-growth-benchmarking-and-peer-positioning-framework.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">032</div>
-        <img src="images/strategic-growth-benchmarking-and-peer-positioning-framework.png" alt="Strategic Growth Benchmarking and Peer Positioning Framework" >
-        <h3>Strategic Growth Benchmarking and Peer Positioning Framework</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="pricing-power-and-asp-benchmark-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">033</div>
-        <img src="images/pricing-power-and-asp-benchmark-diagnostic.png" alt="Pricing Power and ASP Benchmark Diagnostic" >
-        <h3>Pricing Power and ASP Benchmark Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="digital-reputation-and-review-intelligence-monitor.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">034</div>
-        <img src="images/digital-reputation-and-review-intelligence-monitor.png" alt="Digital Reputation and Review Intelligence Monitor" >
-        <h3>Digital Reputation and Review Intelligence Monitor</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="amazon-marketplace-performance-and-growth-opportunity-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">035</div>
-        <img src="images/amazon-marketplace-performance-and-growth-opportunity-diagnostic.png" alt="Amazon Marketplace Performance and Growth Opportunity Diagnostic" >
-        <h3>Amazon Marketplace Performance and Growth Opportunity Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="g.-helium-10-jungle-scout-datahawk-sellics.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">036</div>
-        <img src="images/g.-helium-10-jungle-scout-datahawk-sellics.png" alt="g., Helium 10, Jungle Scout, DataHawk, Sellics)" >
-        <h3>g., Helium 10, Jungle Scout, DataHawk, Sellics)</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="effective-tax-rate-etr-optimization-and-forecasting-model.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">037</div>
-        <img src="images/effective-tax-rate-etr-optimization-and-forecasting-model.png" alt="Effective Tax Rate (ETR) Optimization and Forecasting Model" >
-        <h3>Effective Tax Rate (ETR) Optimization and Forecasting Model</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="steps.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">038</div>
-        <img src="images/steps.png" alt="Steps" >
-        <h3>Steps</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="data-sources.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">039</div>
-        <img src="images/data-sources.png" alt="Data Sources" >
-        <h3>Data Sources</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="indirect-tax-risk-and-opportunity-mapping-engine.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">040</div>
-        <img src="images/indirect-tax-risk-and-opportunity-mapping-engine.png" alt="Indirect Tax Risk and Opportunity Mapping Engine" >
-        <h3>Indirect Tax Risk and Opportunity Mapping Engine</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="entity-rationalization-and-legal-structure-tax-efficiency-review.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">041</div>
-        <img src="images/entity-rationalization-and-legal-structure-tax-efficiency-review.png" alt="Entity Rationalization and Legal Structure Tax Efficiency Review" >
-        <h3>Entity Rationalization and Legal Structure Tax Efficiency Review</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="enterprise-cash-flow-intelligence-and-forecast-accuracy-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">042</div>
-        <img src="images/enterprise-cash-flow-intelligence-and-forecast-accuracy-diagnostic.png" alt="Enterprise Cash Flow Intelligence and Forecast Accuracy Diagnostic" >
-        <h3>Enterprise Cash Flow Intelligence and Forecast Accuracy Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="enterprise-cost-structure-and-operating-leverage-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">043</div>
-        <img src="images/enterprise-cost-structure-and-operating-leverage-diagnostic.png" alt="Enterprise Cost Structure and Operating Leverage Diagnostic" >
-        <h3>Enterprise Cost Structure and Operating Leverage Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="finance-function-efficiency-and-digital-enablement-review.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">044</div>
-        <img src="images/finance-function-efficiency-and-digital-enablement-review.png" alt="Finance Function Efficiency and Digital Enablement Review" >
-        <h3>Finance Function Efficiency and Digital Enablement Review</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="esg-disclosure-readiness-and-regulatory-compliance-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">045</div>
-        <img src="images/esg-disclosure-readiness-and-regulatory-compliance-diagnostic.png" alt="ESG Disclosure Readiness and Regulatory Compliance Diagnostic" >
-        <h3>ESG Disclosure Readiness and Regulatory Compliance Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="resilience-and-business-continuity-risk-exposure-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">046</div>
-        <img src="images/resilience-and-business-continuity-risk-exposure-diagnostic.png" alt="Resilience and Business Continuity Risk Exposure Diagnostic" >
-        <h3>Resilience and Business Continuity Risk Exposure Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="ai-readiness-and-responsible-automation-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">047</div>
-        <img src="images/ai-readiness-and-responsible-automation-diagnostic.png" alt="AI Readiness and Responsible Automation Diagnostic" >
-        <h3>AI Readiness and Responsible Automation Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="data-quality-and-decision-intelligence-maturity-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">048</div>
-        <img src="images/data-quality-and-decision-intelligence-maturity-diagnostic.png" alt="Data Quality and Decision Intelligence Maturity Diagnostic" >
-        <h3>Data Quality and Decision Intelligence Maturity Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="total-workforce-cost-and-productivity-optimization-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">049</div>
-        <img src="images/total-workforce-cost-and-productivity-optimization-diagnostic.png" alt="Total Workforce Cost and Productivity Optimization Diagnostic" >
-        <h3>Total Workforce Cost and Productivity Optimization Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
-
-    <div class="tile solution-card" data-category="AIHUMAN" data-industry="All" data-solution="Value Creation" data-link="pricing-leakage-and-discount-compliance-diagnostic.html">
-      <div class="card-content" style="position: relative;">
-        <div class="tile-ref-number">050</div>
-        <img src="images/pricing-leakage-and-discount-compliance-diagnostic.png" alt="Pricing Leakage and Discount Compliance Diagnostic" >
-        <h3>Pricing Leakage and Discount Compliance Diagnostic</h3>
-        <p>Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.</p>
-      </div>
-    </div>
+    <% }); %>
   </div>
   </section>
 
@@ -530,61 +92,55 @@
 <%- include('partials/contact_modal') %>
 <%- include('partials/login_modal') %>
 <script>
-  
-document.addEventListener("DOMContentLoaded", () => {
-  const tiles = document.querySelectorAll('.tile');
+  let currentFeedbackSolutionId = null;
 
-  tiles.forEach(tile => {
-    tile.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevent default link action
-      tile.classList.add('tile-pressed');
+  // Open feedback modal from card
+  document.querySelectorAll('.feedback-btn').forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent triggering card click
+      event.preventDefault();
 
-      setTimeout(() => {
-        tile.classList.remove('tile-pressed');
-        window.location.href = tile.href; // Navigate after effect
-      }, 150); // Delay to simulate press
+      const solutionId = button.getAttribute('data-solution-id');
+      const solutionTitle = button.getAttribute('data-solution-title');
+
+      currentFeedbackSolutionId = solutionId;
+
+      document.getElementById('feedbackSolutionTitle').textContent = solutionTitle;
+      document.getElementById('feedbackText').value = '';
+      document.getElementById('feedbackModal').style.display = 'block';
     });
   });
-});
 
-
-  document.getElementById('categoryFilter').addEventListener('change', function () {
-    const selected = this.value;
-    const cards = document.querySelectorAll('.solution-card');
-
-    cards.forEach(card => {
-      const category = card.getAttribute('data-category');
-      if (selected === 'ALL' || category === selected) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-  });
-  function applyFilter(category) {
-    const cards = document.querySelectorAll('.solution-card');
-    cards.forEach(card => {
-      const cardCategory = card.getAttribute('data-category');
-      if (category === 'ALL' || cardCategory === category) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-    document.getElementById('categoryFilter').value = category;
+  // Close feedback modal
+  function closeFeedbackModal() {
+    document.getElementById('feedbackModal').style.display = 'none';
   }
 
-  // Get filter from URL query string
-  window.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const initialFilter = params.get('filter') || 'ALL';
-    applyFilter(initialFilter);
-  });
+  // Submit feedback (dummy function)
+  function submitFeedback() {
+    const feedback = document.getElementById('feedbackText').value;
+    if (!feedback.trim()) {
+      alert("Please enter feedback before submitting.");
+      return;
+    }
 
-  document.getElementById('categoryFilter').addEventListener('change', function () {
-    applyFilter(this.value);
-  });
+    console.log("Submitted feedback:", {
+      solutionId: currentFeedbackSolutionId,
+      feedback: feedback
+    });
 
+    // You could replace this with a fetch/POST call
+    alert("Feedback submitted! Thank you.");
+    closeFeedbackModal();
+  }
+
+  // Optional: close modal when clicking outside
+  window.addEventListener('click', (event) => {
+    const modal = document.getElementById('feedbackModal');
+    if (event.target === modal) {
+      closeFeedbackModal();
+    }
+  });
 </script>
 
 <%- include('partials/footer') %>
