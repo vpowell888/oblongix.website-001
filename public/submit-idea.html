@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oblongix | Business Consulting Redefined by AI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+  <header class="oblongix-header">
+    <div class="container header-flex">
+      <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="logo" />
+      <nav class="navbar">
+        <div class="hamburger" onclick="toggleMobileMenu()">&#9776;</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="./solutions.html">Solutions</a></li>
+          <li><a href="./insights.html">Insights</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="javascript:void(0);" onclick="openContactModal()">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button onclick="openLoginModal()" id="loginBtn">Login</button>
+
+        <div id="profileIcon" style="display: none;" onclick="openProfileModal()" title="Your Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" class="profile-icon" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5.121 17.804A13.937 13.937 0 0112 15c2.21 0 4.28.534 6.121 1.48M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+
+        <button onclick="logout()" id="logoutBtn" style="display: none;">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container" style="margin: 40px auto;">
+    <h2>Submit a New Product Idea</h2>
+
+    <form id="ideaForm">
+      <label for="ideaTitle">Title:</label>
+      <input type="text" id="ideaTitle" name="ideaTitle" required />
+
+      <label for="ideaDescription">Description:</label>
+      <textarea id="ideaDescription" name="ideaDescription" rows="4" required></textarea>
+
+      <label for="ideaBenefit">What's the Business Value of this idea:</label>
+      <textarea id="ideaBenefit" name="ideaBenefit" rows="4" required></textarea>
+
+      <label for="ideaAlliances">Are there any recommended products or other companies to work with:</label>
+      <textarea id="ideaAlliances" name="ideaAlliances" rows="4" required></textarea>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+            <label for="industryFilter">Industry:</label>
+            <select id="industryFilter" name="industryFilter" class="filter-select" onchange="handleOtherSelection(this)">
+                <option value="">Select</option>
+                <option value="Finance">Finance</option>
+                <option value="Retail">Retail</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Technology">Technology</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <div id="otherIndustryContainer" style="margin-top: 8px; display: none;">
+                <label for="otherIndustry">Please specify:</label>
+                <input type="text" id="otherIndustry" name="otherIndustry" class="filter-select" />
+            </div>
+        </div>
+
+
+        <div class="filter-group">
+          <label for="solutionFilter">Solution Area:</label>
+          <select id="solutionFilter" name="solutionFilter" class="filter-select">
+            <option value="">Select</option>
+            <option value="Finance">Finance</option>
+            <option value="ESG">ESG</option>
+            <option value="Technology">Technology</option>
+            <option value="Value Creation">Value Creation</option>
+            <option value="Workforce Talent">Workforce & Talent</option>
+            <option value="Operational Optimisation">Operational Optimisation</option>
+            <option value="Customer Analytics">Customer Analytics</option>
+            <option value="Other">Other</option>
+          </select>
+
+            <div id="otherSolutionContainer" style="margin-top: 8px; display: none;">
+                <label for="otherSolution">Please specify:</label>
+                <input type="text" id="otherSolution" name="otherSolution" class="filter-select" />
+            </div>
+        
+        </div>
+
+        <div class="filter-group">
+          <label for="categoryFilter">Category:</label>
+          <select id="categoryFilter" name="categoryFilter" class="filter-select">
+            <option value="">Select</option>
+            <option value="AI">AI</option>
+            <option value="AIHUMAN">AI + Human</option>
+            <option value="HUMANAI">Human with AI</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; text-align: right;">
+        <button type="submit" class="idea-button">Submit Idea</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function handleOtherSelection(select) {
+      const otherContainer = document.getElementById('otherIndustryContainer');
+      const otherInput = document.getElementById('otherIndustry');
+
+      if (select.value === 'Other') {
+        otherContainer.style.display = 'block';
+        otherInput.required = true;
+      } else {
+        otherContainer.style.display = 'none';
+        otherInput.required = false;
+        otherInput.value = '';
+      }
+    }
+
+    document.getElementById('ideaForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const title = document.getElementById('ideaTitle').value;
+      const desc = document.getElementById('ideaDescription').value;
+
+      alert(`Idea Submitted!\nTitle: ${title}\nDescription: ${desc}`);
+      window.location.href = "index.html";
+    });
+  </script>
+
+  <footer class="mega-footer">
+    <div class="container mega-footer-grid">
+      <div class="footer-col">
+        <img src="./assets/Oblongix Logo.png" alt="Oblongix Logo" class="footer-logo" />
+      </div>
+      <div class="footer-col">
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="./solutions.html">Solutions</a></li>
+          <li><a href="./insights.html">Insights</a></li>
+          <li><a href="./alliances.html">Alliances</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect with Us</h4>
+        <ul>
+          <li><a href="javascript:void(0);" onclick="openContactModal()">Contact Support</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms and cookies.html">Terms & Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Oblongix. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
