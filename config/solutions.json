@@ -2,554 +2,879 @@
   "solutions" :
 [
   {
-    "ref": "001",
-    "title": "Inventory Optimisation",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/inventory-optimisation.png",
-    "alt": "Inventory Optimisation",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "inventory-optimisation.html"
-  },
-  {
-    "ref": "002",
-    "title": "Inventory Execution Excellence Framework",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/inventory-execution-excellence-framework.png",
-    "alt": "Inventory Execution Excellence Framework",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "inventory-execution-excellence-framework.html"
-  },
-  {
-    "ref": "003",
-    "title": "Strategic CapEx Planning Blueprint",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/strategic-capex-planning-blueprint.png",
-    "alt": "Strategic CapEx Planning Blueprint",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "strategic-capex-planning-blueprint.html"
-  },
-  {
-    "ref": "004",
-    "title": "Organizational Leverage Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/organizational-leverage-diagnostic.png",
-    "alt": "Organizational Leverage Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "organizational-leverage-diagnostic.html"
-  },
-  {
-    "ref": "005",
-    "title": "Workforce Sentiment Intelligence Engine",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/workforce-sentiment-intelligence-engine.png",
-    "alt": "Workforce Sentiment Intelligence Engine",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "workforce-sentiment-intelligence-engine.html"
-  },
-  {
-    "ref": "006",
-    "title": "Lean G&A Performance Benchmark",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/lean-ganda-performance-benchmark.png",
-    "alt": "Lean G&A Performance Benchmark",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "lean-ganda-performance-benchmark.html"
-  },
-  {
-    "ref": "007",
-    "title": "Network Footprint Optimization Model",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/network-footprint-optimization-model.png",
-    "alt": "Network Footprint Optimization Model",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "network-footprint-optimization-model.html"
-  },
-  {
-    "ref": "008",
-    "title": "Strategic Sourcing and Supplier Spend Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/strategic-sourcing-and-supplier-spend-diagnostic.png",
-    "alt": "Strategic Sourcing and Supplier Spend Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "strategic-sourcing-and-supplier-spend-diagnostic.html"
-  },
-  {
-    "ref": "009",
-    "title": "Supply Chain Risk and Trade Exposure Assessment",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/supply-chain-risk-and-trade-exposure-assessment.png",
-    "alt": "Supply Chain Risk and Trade Exposure Assessment",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "supply-chain-risk-and-trade-exposure-assessment.html"
-  },
-  {
-    "ref": "010",
-    "title": "Cost to Serve Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/cost-to-serve-diagnostic.png",
-    "alt": "Cost to Serve Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "cost-to-serve-diagnostic.html"
-  },
-  {
-    "ref": "011",
-    "title": "Integrated Cost-to-Serve Optimization Playbook",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/integrated-cost-to-serve-optimization-playbook.png",
-    "alt": "Integrated Cost-to-Serve Optimization Playbook",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "integrated-cost-to-serve-optimization-playbook.html"
-  },
-  {
-    "ref": "012",
-    "title": "Freight Margin Recovery and Logistics Cost Efficiency Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/freight-margin-recovery-and-logistics-cost-efficiency-diagnostic.png",
-    "alt": "Freight Margin Recovery and Logistics Cost Efficiency Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "freight-margin-recovery-and-logistics-cost-efficiency-diagnostic.html"
-  },
-  {
-    "ref": "013",
-    "title": "Operational Throughput and Manufacturing Efficiency Dashboard",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/operational-throughput-and-manufacturing-efficiency-dashboard.png",
-    "alt": "Operational Throughput and Manufacturing Efficiency Dashboard",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "operational-throughput-and-manufacturing-efficiency-dashboard.html"
-  },
-  {
-    "ref": "014",
-    "title": "Localized Market Penetration and Growth Opportunity Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/localized-market-penetration-and-growth-opportunity-diagnostic.png",
-    "alt": "Localized Market Penetration and Growth Opportunity Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "localized-market-penetration-and-growth-opportunity-diagnostic.html"
-  },
-  {
-    "ref": "015",
-    "title": "End-to-End Market Expansion Planning Suite",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/end-to-end-market-expansion-planning-suite.png",
-    "alt": "End-to-End Market Expansion Planning Suite",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "end-to-end-market-expansion-planning-suite.html"
-  },
-  {
-    "ref": "016",
-    "title": "Digital Channel Performance and Traffic Benchmark Suite",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/digital-channel-performance-and-traffic-benchmark-suite.png",
-    "alt": "Digital Channel Performance and Traffic Benchmark Suite",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "digital-channel-performance-and-traffic-benchmark-suite.html"
-  },
-  {
-    "ref": "017",
-    "title": "Brand Perception and Social Signal Intelligence Dashboard",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/brand-perception-and-social-signal-intelligence-dashboard.png",
-    "alt": "Brand Perception and Social Signal Intelligence Dashboard",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "brand-perception-and-social-signal-intelligence-dashboard.html"
-  },
-  {
-    "ref": "018",
-    "title": "Microeconomics of Growth and Location ROI Modeling",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/microeconomics-of-growth-and-location-roi-modeling.png",
-    "alt": "Microeconomics of Growth and Location ROI Modeling",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "microeconomics-of-growth-and-location-roi-modeling.html"
-  },
-  {
-    "ref": "019",
     "title": "AI-Powered Location Performance Forecasting Engine",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
+    "description": "The AI-Powered Location Performance Forecasting Engine leverages advanced machine learning techniques to predict the financial and operational performance of new or existing locations based on hundreds of variables \u2014 including local demographics, competitive density, traffic patterns, and customer behavior. It provides predictive accuracy far beyond traditional site selection methods, enabling confident, data-driven decisions on where to invest, divest, or optimize.",
     "image": "images/ai-powered-location-performance-forecasting-engine.png",
     "alt": "AI-Powered Location Performance Forecasting Engine",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "ai-powered-location-performance-forecasting-engine.html"
+    "category": "AI",
+    "industry": "Retail",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "MVP Build",
+    "link": "ai-powered-location-performance-forecasting-engine.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Machine Learning",
+      "Predictive Modelling",
+      "Data Visualization",
+      "Business Strategy"
+    ],
+    "ref": 1
   },
   {
-    "ref": "020",
-    "title": "SKU Margin Intelligence and Rationalization Framework",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/sku-margin-intelligence-and-rationalization-framework.png",
-    "alt": "SKU Margin Intelligence and Rationalization Framework",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "sku-margin-intelligence-and-rationalization-framework.html"
-  },
-  {
-    "ref": "021",
-    "title": "Card Spend Insights and Purchase Behavior Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/card-spend-insights-and-purchase-behavior-diagnostic.png",
-    "alt": "Card Spend Insights and Purchase Behavior Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "card-spend-insights-and-purchase-behavior-diagnostic.html"
-  },
-  {
-    "ref": "022",
-    "title": "Retail Network Growth and Regional Sales Benchmark Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/retail-network-growth-and-regional-sales-benchmark-diagnostic.png",
-    "alt": "Retail Network Growth and Regional Sales Benchmark Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "retail-network-growth-and-regional-sales-benchmark-diagnostic.html"
-  },
-  {
-    "ref": "023",
-    "title": "Customer Voice and Behavioral Insight Framework",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/customer-voice-and-behavioral-insight-framework.png",
-    "alt": "Customer Voice and Behavioral Insight Framework",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "customer-voice-and-behavioral-insight-framework.html"
-  },
-  {
-    "ref": "024",
-    "title": "g., Dynata, Toluna, SurveyMonkey Audience)",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/g.-dynata-toluna-surveymonkey-audience.png",
-    "alt": "g., Dynata, Toluna, SurveyMonkey Audience)",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "g.-dynata-toluna-surveymonkey-audience.html"
-  },
-  {
-    "ref": "025",
-    "title": "New Store Ramp Curve Optimization & Uplift Strategy Model",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/new-store-ramp-curve-optimization-and-uplift-strategy-model.png",
-    "alt": "New Store Ramp Curve Optimization & Uplift Strategy Model",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "new-store-ramp-curve-optimization-and-uplift-strategy-model.html"
-  },
-  {
-    "ref": "026",
-    "title": "Predictive Customer Lifetime Value (CLV) and Retention Strategy Engine",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/predictive-customer-lifetime-value-clv-and-retention-strategy-engine.png",
-    "alt": "Predictive Customer Lifetime Value (CLV) and Retention Strategy Engine",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "predictive-customer-lifetime-value-clv-and-retention-strategy-engine.html"
-  },
-  {
-    "ref": "027",
-    "title": "End-to-End Profitability Driver Tree and Margin Impact Model",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/end-to-end-profitability-driver-tree-and-margin-impact-model.png",
-    "alt": "End-to-End Profitability Driver Tree and Margin Impact Model",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "end-to-end-profitability-driver-tree-and-margin-impact-model.html"
-  },
-  {
-    "ref": "028",
-    "title": "Customer Retention and Churn Risk Analytics Engine",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/customer-retention-and-churn-risk-analytics-engine.png",
-    "alt": "Customer Retention and Churn Risk Analytics Engine",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "customer-retention-and-churn-risk-analytics-engine.html"
-  },
-  {
-    "ref": "029",
-    "title": "Enterprise Churn Strategy Framework and Predictive Intervention Model",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/enterprise-churn-strategy-framework-and-predictive-intervention-model.png",
-    "alt": "Enterprise Churn Strategy Framework and Predictive Intervention Model",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "enterprise-churn-strategy-framework-and-predictive-intervention-model.html"
-  },
-  {
-    "ref": "030",
-    "title": "White Space Opportunity Mapping and Demand Gap Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/white-space-opportunity-mapping-and-demand-gap-diagnostic.png",
-    "alt": "White Space Opportunity Mapping and Demand Gap Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "white-space-opportunity-mapping-and-demand-gap-diagnostic.html"
-  },
-  {
-    "ref": "031",
-    "title": "Revenue Expansion and Offer Mix Optimization Engine",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/revenue-expansion-and-offer-mix-optimization-engine.png",
-    "alt": "Revenue Expansion and Offer Mix Optimization Engine",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "revenue-expansion-and-offer-mix-optimization-engine.html"
-  },
-  {
-    "ref": "032",
-    "title": "Strategic Growth Benchmarking and Peer Positioning Framework",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/strategic-growth-benchmarking-and-peer-positioning-framework.png",
-    "alt": "Strategic Growth Benchmarking and Peer Positioning Framework",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "strategic-growth-benchmarking-and-peer-positioning-framework.html"
-  },
-  {
-    "ref": "033",
-    "title": "Pricing Power and ASP Benchmark Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/pricing-power-and-asp-benchmark-diagnostic.png",
-    "alt": "Pricing Power and ASP Benchmark Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "pricing-power-and-asp-benchmark-diagnostic.html"
-  },
-  {
-    "ref": "034",
-    "title": "Digital Reputation and Review Intelligence Monitor",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/digital-reputation-and-review-intelligence-monitor.png",
-    "alt": "Digital Reputation and Review Intelligence Monitor",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "digital-reputation-and-review-intelligence-monitor.html"
-  },
-  {
-    "ref": "035",
-    "title": "Amazon Marketplace Performance and Growth Opportunity Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/amazon-marketplace-performance-and-growth-opportunity-diagnostic.png",
-    "alt": "Amazon Marketplace Performance and Growth Opportunity Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "amazon-marketplace-performance-and-growth-opportunity-diagnostic.html"
-  },
-  {
-    "ref": "036",
-    "title": "g., Helium 10, Jungle Scout, DataHawk, Sellics)",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/g.-helium-10-jungle-scout-datahawk-sellics.png",
-    "alt": "g., Helium 10, Jungle Scout, DataHawk, Sellics)",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "g.-helium-10-jungle-scout-datahawk-sellics.html"
-  },
-  {
-    "ref": "037",
-    "title": "Effective Tax Rate (ETR) Optimization and Forecasting Model",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/effective-tax-rate-etr-optimization-and-forecasting-model.png",
-    "alt": "Effective Tax Rate (ETR) Optimization and Forecasting Model",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "effective-tax-rate-etr-optimization-and-forecasting-model.html"
-  },
-  {
-    "ref": "038",
-    "title": "Steps",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/steps.png",
-    "alt": "Steps",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "steps.html"
-  },
-  {
-    "ref": "039",
-    "title": "Data Sources",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/data-sources.png",
-    "alt": "Data Sources",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "data-sources.html"
-  },
-  {
-    "ref": "040",
-    "title": "Indirect Tax Risk and Opportunity Mapping Engine",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/indirect-tax-risk-and-opportunity-mapping-engine.png",
-    "alt": "Indirect Tax Risk and Opportunity Mapping Engine",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "indirect-tax-risk-and-opportunity-mapping-engine.html"
-  },
-  {
-    "ref": "041",
-    "title": "Entity Rationalization and Legal Structure Tax Efficiency Review",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/entity-rationalization-and-legal-structure-tax-efficiency-review.png",
-    "alt": "Entity Rationalization and Legal Structure Tax Efficiency Review",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "entity-rationalization-and-legal-structure-tax-efficiency-review.html"
-  },
-  {
-    "ref": "042",
-    "title": "Enterprise Cash Flow Intelligence and Forecast Accuracy Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/enterprise-cash-flow-intelligence-and-forecast-accuracy-diagnostic.png",
-    "alt": "Enterprise Cash Flow Intelligence and Forecast Accuracy Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "enterprise-cash-flow-intelligence-and-forecast-accuracy-diagnostic.html"
-  },
-  {
-    "ref": "043",
-    "title": "Enterprise Cost Structure and Operating Leverage Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/enterprise-cost-structure-and-operating-leverage-diagnostic.png",
-    "alt": "Enterprise Cost Structure and Operating Leverage Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "enterprise-cost-structure-and-operating-leverage-diagnostic.html"
-  },
-  {
-    "ref": "044",
-    "title": "Finance Function Efficiency and Digital Enablement Review",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/finance-function-efficiency-and-digital-enablement-review.png",
-    "alt": "Finance Function Efficiency and Digital Enablement Review",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "finance-function-efficiency-and-digital-enablement-review.html"
-  },
-  {
-    "ref": "045",
-    "title": "ESG Disclosure Readiness and Regulatory Compliance Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/esg-disclosure-readiness-and-regulatory-compliance-diagnostic.png",
-    "alt": "ESG Disclosure Readiness and Regulatory Compliance Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "esg-disclosure-readiness-and-regulatory-compliance-diagnostic.html"
-  },
-  {
-    "ref": "046",
-    "title": "Resilience and Business Continuity Risk Exposure Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/resilience-and-business-continuity-risk-exposure-diagnostic.png",
-    "alt": "Resilience and Business Continuity Risk Exposure Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "resilience-and-business-continuity-risk-exposure-diagnostic.html"
-  },
-  {
-    "ref": "047",
     "title": "AI Readiness and Responsible Automation Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
+    "description": "The AI Readiness and Responsible Automation Diagnostic evaluates an organization\u2019s preparedness to deploy artificial intelligence and intelligent automation at scale. It assesses AI use-case potential across functions, existing data and technology infrastructure, talent capabilities, governance frameworks, and ethical risk controls. This diagnostic helps organizations move from experimentation to enterprise-grade AI adoption responsibly and strategically.",
     "image": "images/ai-readiness-and-responsible-automation-diagnostic.png",
     "alt": "AI Readiness and Responsible Automation Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "ai-readiness-and-responsible-automation-diagnostic.html"
+    "category": "AI",
+    "industry": "ALL",
+    "solutionArea": "ALL",
+    "lifecycleStage": "ALL",
+    "link": "ai-readiness-and-responsible-automation-diagnostic.ejs",
+    "consultingSkills": [
+      "Inventory Existing Automation and AI Initiatives",
+      "Map High-Impact AI Use Cases by Function",
+      "Assess Data Infrastructure and Model Readiness",
+      "Evaluate Talent and Organizational Capabilities",
+      "Review AI Governance and Ethical Risk Controls"
+    ],
+    "ref": 2
   },
   {
-    "ref": "048",
+    "title": "Amazon Marketplace Performance and Growth Opportunity Diagnostic",
+    "description": "The Amazon Marketplace Performance and Growth Opportunity Diagnostic evaluates a brand\u2019s positioning, sales performance, competitive landscape, and growth potential within the Amazon ecosystem. It uncovers how well products are performing relative to peers, identifies search visibility gaps, and provides data-driven recommendations for improving conversion, share of voice, and profitability on the platform.",
+    "image": "images/amazon-marketplace-performance-and-growth-opportunity-diagnostic.png",
+    "alt": "Amazon Marketplace Performance and Growth Opportunity Diagnostic",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "Scoping",
+    "link": "amazon-marketplace-performance-and-growth-opportunity-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Market Research",
+      "Competitive Analysis",
+      "Strategy Development",
+      "Performance Monitoring"
+    ],
+    "ref": 3
+  },
+  {
+    "title": "Brand Perception and Social Signal Intelligence Dashboard",
+    "description": "The Brand Perception and Social Signal Intelligence Dashboard analyzes how consumers perceive and interact with a brand across social media, review platforms, forums, and other digital channels. It surfaces themes, emotions, and volume of conversation to track brand health, competitive positioning, and emerging risks or opportunities in real time. This diagnostic is a key tool for marketing, PR, and customer experience teams to align messaging and improve brand resonance.",
+    "image": "images/brand-perception-and-social-signal-intelligence-dashboard.png",
+    "alt": "Brand Perception and Social Signal Intelligence Dashboard",
+    "category": "AI",
+    "industry": "ALL",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "ALL",
+    "link": "brand-perception-and-social-signal-intelligence-dashboard.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Social Media Monitoring",
+      "Brand Management",
+      "Sentiment Analysis",
+      "Crisis Management"
+    ],
+    "ref": 4
+  },
+  {
+    "title": "Card Spend Insights and Purchase Behavior Diagnostic",
+    "description": "The Card Spend Insights and Purchase Behavior Diagnostic analyzes anonymized credit and debit card transaction data to uncover detailed customer behavior patterns, spending preferences, competitive wallet share, and drivers of purchase frequency. It enables a nuanced understanding of when, where, and why customers spend \u2014 helping brands shape acquisition, retention, pricing, and location strategies with unmatched behavioral precision.",
+    "image": "images/card-spend-insights-and-purchase-behavior-diagnostic.png",
+    "alt": "Card Spend Insights and Purchase Behavior Diagnostic",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "Market Validation",
+    "link": "card-spend-insights-and-purchase-behavior-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Acquisition and Segmentation",
+      "Share of Wallet and Purchase Frequency Analysis",
+      "Cross-Shopping and Competitor Leakage Identification",
+      "Customer Segmentation by Spend Behavior",
+      "Demographic and Location Insights Overlay"
+    ],
+    "ref": 5
+  },
+  {
+    "title": "Cost to Serve Diagnostic",
+    "description": "The Customer Profitability & Service Cost Diagnostic uncovers the true cost of serving different customer segments, channels, and order profiles by analyzing the full range of activities required to fulfill and support those customers. It isolates the hidden costs embedded in service models \u2014 such as shipping, returns, customization, or account management \u2014 and calculates profit at the customer or segment level to inform pricing, service tiering, and go-to-market strategies.",
+    "image": "images/cost-to-serve-diagnostic.png",
+    "alt": "Cost to Serve Diagnostic",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "cost-to-serve-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Business Strategy",
+      "Cost Management",
+      "Customer Segmentation",
+      "Pricing Strategy"
+    ],
+    "ref": 7
+  },
+  {
+    "title": "Customer Retention and Churn Risk Analytics Engine",
+    "description": "The Customer Retention and Churn Risk Analytics Engine uses behavioral, transactional, and engagement data to identify at-risk customers and uncover the drivers behind customer attrition. By combining predictive modeling with segmentation analysis, this diagnostic enables targeted retention strategies that prevent revenue leakage and extend customer lifetime value.",
+    "image": "images/customer-retention-and-churn-risk-analytics-engine.png",
+    "alt": "Customer Retention and Churn Risk Analytics Engine",
+    "category": "AI",
+    "industry": "Retail",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "Scoping",
+    "link": "customer-retention-and-churn-risk-analytics-engine.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Predictive Modeling",
+      "Customer Segmentation",
+      "Churn Risk Assessment",
+      "Retention Strategy Design"
+    ],
+    "ref": 8
+  },
+  {
+    "title": "Customer Voice and Behavioral Insight Framework",
+    "description": "The Customer Voice and Behavioral Insight Framework is a structured approach to designing, executing, and analyzing customer surveys and behavioral research to uncover needs, preferences, perceptions, and decision-making drivers. It enables organizations to translate the \u201cvoice of the customer\u201d into actionable insights that guide product development, marketing strategy, customer experience design, and brand positioning.",
+    "image": "images/customer-voice-and-behavioral-insight-framework.png",
+    "alt": "Customer Voice and Behavioral Insight Framework",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "Ideas",
+    "link": "customer-voice-and-behavioral-insight-framework.ejs",
+    "consultingSkills": [
+      "Survey Design",
+      "Data Analysis",
+      "Customer Segmentation",
+      "Behavioral Insight",
+      "Strategy Recommendation"
+    ],
+    "ref": 9
+  },
+  {
     "title": "Data Quality and Decision Intelligence Maturity Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
+    "description": "The Data Quality and Decision Intelligence Maturity Diagnostic evaluates the accuracy, consistency, and usability of enterprise data as it relates to decision-making. It identifies root causes of poor data trust, misaligned data governance, and ineffective analytics workflows \u2014 all of which erode strategic decision velocity and accuracy. This diagnostic supports the creation of a roadmap for building a reliable, insight-driven organization.",
     "image": "images/data-quality-and-decision-intelligence-maturity-diagnostic.png",
     "alt": "Data Quality and Decision Intelligence Maturity Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "data-quality-and-decision-intelligence-maturity-diagnostic.html"
+    "category": "AI",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "data-quality-and-decision-intelligence-maturity-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Data Governance",
+      "Data Quality Assessment",
+      "Decision Intelligence",
+      "Roadmap Development"
+    ],
+    "ref": 10
   },
   {
-    "ref": "049",
-    "title": "Total Workforce Cost and Productivity Optimization Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
-    "image": "images/total-workforce-cost-and-productivity-optimization-diagnostic.png",
-    "alt": "Total Workforce Cost and Productivity Optimization Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
-    "solutionArea": "Value Creation",
-    "link": "total-workforce-cost-and-productivity-optimization-diagnostic.html"
+    "title": "Digital Channel Performance and Traffic Benchmark Suite",
+    "description": "The Digital Channel Performance and Traffic Benchmark Suite evaluates a company\u2019s online presence, digital traffic mix, and conversion performance compared to industry peers. It identifies strengths and gaps in digital acquisition, engagement, and channel ROI across web, mobile, and marketplace platforms. This diagnostic is designed to guide improvements in customer acquisition efficiency, digital experience design, and e-commerce profitability.",
+    "image": "images/digital-channel-performance-and-traffic-benchmark-suite.png",
+    "alt": "Digital Channel Performance and Traffic Benchmark Suite",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "Market Validation",
+    "link": "digital-channel-performance-and-traffic-benchmark-suite.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Benchmarking",
+      "Conversion Funnel Analysis",
+      "Digital Marketing Spend Evaluation",
+      "Technical and UX Performance Review"
+    ],
+    "ref": 11
   },
   {
-    "ref": "050",
+    "title": "Digital Reputation and Review Intelligence Monitor",
+    "description": "The Digital Reputation and Review Intelligence Monitor systematically analyzes online reviews, ratings, and customer commentary across digital platforms to assess brand perception, service quality, and product satisfaction. It identifies recurring themes, sentiment shifts, and experience gaps, enabling organizations to take targeted action to improve customer satisfaction, boost NPS, and enhance their digital reputation.",
+    "image": "images/digital-reputation-and-review-intelligence-monitor.png",
+    "alt": "Digital Reputation and Review Intelligence Monitor",
+    "category": "AI",
+    "industry": "ALL",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "ALL",
+    "link": "digital-reputation-and-review-intelligence-monitor.ejs",
+    "consultingSkills": [
+      "Data Aggregation",
+      "Sentiment Analysis",
+      "Competitive Benchmarking",
+      "Trend Analysis",
+      "Root Cause Analysis"
+    ],
+    "ref": 12
+  },
+  {
+    "title": "Effective Tax Rate (ETR) Optimization and Forecasting Model",
+    "description": "This diagnostic analyzes a company's current effective tax rate and its drivers \u2014 including geographic income mix, tax credits, deductions, and transfer pricing \u2014 to identify opportunities to reduce tax burden and improve cash tax forecasting accuracy. It also models the impact of strategic decisions (e.g., restructuring, M&A) on future ETR.",
+    "image": "images/effective-tax-rate-etr-optimization-and-forecasting-model.png",
+    "alt": "Effective Tax Rate (ETR) Optimization and Forecasting Model",
+    "category": "AI",
+    "industry": "Finance",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "effective-tax-rate-etr-optimization-and-forecasting-model.ejs",
+    "consultingSkills": [
+      "Tax planning",
+      "Global footprint evaluations",
+      "M&A",
+      "Budget cycles",
+      "Financial planning"
+    ],
+    "ref": 13
+  },
+  {
+    "title": "End-to-End Market Expansion Planning Suite",
+    "description": "A comprehensive diagnostic and planning framework that integrates market share analysis, local demand modeling, competitive landscape mapping, and investment prioritization to guide multi-location growth strategies.",
+    "image": "images/end-to-end-market-expansion-planning-suite.png",
+    "alt": "End-to-End Market Expansion Planning Suite",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Value Creation",
+    "lifecycleStage": "Scoping",
+    "link": "end-to-end-market-expansion-planning-suite.ejs",
+    "consultingSkills": [
+      "Market Analysis",
+      "Demand Modeling",
+      "Competitive Landscape Mapping",
+      "Investment Prioritization",
+      "Cross-Functional Execution"
+    ],
+    "ref": 14
+  },
+  {
+    "title": "End-to-End Profitability Driver Tree and Margin Impact Model",
+    "description": "The End-to-End Profitability Driver Tree and Margin Impact Model is a structured diagnostic that decomposes a company\u2019s profit and loss statement into granular operational and financial drivers. It visually maps how revenue, cost, and efficiency levers connect to margins and EBITDA, helping organizations identify where to focus for the highest impact on profitability. This framework turns complex financial performance into actionable insights.",
+    "image": "images/end-to-end-profitability-driver-tree-and-margin-impact-model.png",
+    "alt": "End-to-End Profitability Driver Tree and Margin Impact Model",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "end-to-end-profitability-driver-tree-and-margin-impact-model.ejs",
+    "consultingSkills": [
+      "Financial Analysis",
+      "Data Gathering",
+      "Impact Quantification",
+      "Data Visualization",
+      "Strategic Planning"
+    ],
+    "ref": 15
+  },
+  {
+    "title": "Enterprise Cash Flow Intelligence and Forecast Accuracy Diagnostic",
+    "description": "This diagnostic evaluates the company\u2019s current cash forecasting process, variance accuracy, and liquidity visibility. It improves short- and long-term forecasting accuracy using data-driven models and driver-based planning.",
+    "image": "images/enterprise-cash-flow-intelligence-and-forecast-accuracy-diagnostic.png",
+    "alt": "Enterprise Cash Flow Intelligence and Forecast Accuracy Diagnostic",
+    "category": "AI",
+    "industry": "Finance",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "enterprise-cash-flow-intelligence-and-forecast-accuracy-diagnostic.ejs",
+    "consultingSkills": [
+      "Cash Flow Analysis",
+      "Forecasting",
+      "Data Modeling",
+      "Variance Analysis",
+      "Liquidity Management"
+    ],
+    "ref": 16
+  },
+  {
+    "title": "Enterprise Churn Strategy Framework and Predictive Intervention Model",
+    "description": "The Enterprise Churn Strategy Framework and Predictive Intervention Model builds on churn analytics by connecting churn insights across customer experience, product, pricing, and marketing functions to drive enterprise-wide retention impact. It combines predictive churn modeling with structured root cause analysis, strategic segmentation, and coordinated action plans to reduce attrition across all customer lifecycle stages.",
+    "image": "images/enterprise-churn-strategy-framework-and-predictive-intervention-model.png",
+    "alt": "Enterprise Churn Strategy Framework and Predictive Intervention Model",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "ALL",
+    "link": "enterprise-churn-strategy-framework-and-predictive-intervention-model.ejs",
+    "consultingSkills": [
+      "Predictive Churn Modeling",
+      "Root Cause Analysis",
+      "Strategic Segmentation",
+      "Coordinated Action Planning",
+      "Retention Impact Analysis"
+    ],
+    "ref": 17
+  },
+  {
+    "title": "Enterprise Cost Structure and Operating Leverage Diagnostic",
+    "description": "This diagnostic dissects the fixed vs. variable cost structure and operating leverage of a company, identifying areas to improve margin stability, reduce cost volatility, and align cost structure to revenue variability.",
+    "image": "images/enterprise-cost-structure-and-operating-leverage-diagnostic.png",
+    "alt": "Enterprise Cost Structure and Operating Leverage Diagnostic",
+    "category": "AI",
+    "industry": "ALL",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "enterprise-cost-structure-and-operating-leverage-diagnostic.ejs",
+    "consultingSkills": [
+      "Financial Analysis",
+      "Cost Management",
+      "Strategic Planning",
+      "Data Analysis",
+      "Business Intelligence"
+    ],
+    "ref": 18
+  },
+  {
+    "title": "Entity Rationalization and Legal Structure Tax Efficiency Review",
+    "description": "This diagnostic assesses the company\u2019s legal entity structure for tax, compliance, and operational inefficiencies. It identifies redundant or high-maintenance entities and recommends restructuring for tax savings and simplicity.",
+    "image": "images/entity-rationalization-and-legal-structure-tax-efficiency-review.png",
+    "alt": "Entity Rationalization and Legal Structure Tax Efficiency Review",
+    "category": "AI",
+    "industry": "Finance",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "entity-rationalization-and-legal-structure-tax-efficiency-review.ejs",
+    "consultingSkills": [
+      "Legal entity structure mapping",
+      "Compliance burden analysis",
+      "Evaluation of trapped losses and non-utilized tax attributes",
+      "Recommendation of mergers, liquidations, or simplifications",
+      "Modeling of one-time vs. recurring tax impact of rationalization"
+    ],
+    "ref": 19
+  },
+  {
+    "title": "ESG Disclosure Readiness and Regulatory Compliance Diagnostic",
+    "description": "The ESG Disclosure Readiness and Regulatory Compliance Diagnostic assesses a company\u2019s preparedness to meet evolving environmental, social, and governance (ESG) reporting requirements across jurisdictions. It evaluates data availability, control processes, stakeholder alignment, and alignment with frameworks such as CSRD, ISSB (IFRS S1/S2), GRI, and the SEC Climate Rule. The diagnostic identifies disclosure gaps, operational risks, and actions needed to ensure compliant, investor-grade sustainability reporting.",
+    "image": "images/esg-disclosure-readiness-and-regulatory-compliance-diagnostic.png",
+    "alt": "ESG Disclosure Readiness and Regulatory Compliance Diagnostic",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "ESG",
+    "lifecycleStage": "ALL",
+    "link": "esg-disclosure-readiness-and-regulatory-compliance-diagnostic.ejs",
+    "consultingSkills": [
+      "Regulatory Compliance",
+      "ESG Reporting",
+      "Risk Assessment",
+      "Data Analysis",
+      "Stakeholder Management"
+    ],
+    "ref": 20
+  },
+  {
+    "title": "Finance Function Efficiency and Digital Enablement Review",
+    "description": "This diagnostic assesses the efficiency and digital maturity of the finance function, benchmarking FTE productivity, cycle times, automation levels, and tool adoption. It identifies modernization opportunities across core finance processes.",
+    "image": "images/finance-function-efficiency-and-digital-enablement-review.png",
+    "alt": "Finance Function Efficiency and Digital Enablement Review",
+    "category": "AI + Human",
+    "industry": "Finance",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "finance-function-efficiency-and-digital-enablement-review.ejs",
+    "consultingSkills": [
+      "Finance Transformation",
+      "ERP Implementations",
+      "Shared Services Evaluations",
+      "Process Mapping",
+      "Benchmarking"
+    ],
+    "ref": 21
+  },
+  {
+    "title": "Freight Margin Recovery and Logistics Cost Efficiency Diagnostic",
+    "description": "The Freight Margin Recovery and Logistics Cost Efficiency Diagnostic evaluates a company\u2019s shipping and freight cost structures, cost recovery mechanisms, and logistics strategy to identify opportunities for margin recovery and operational savings.",
+    "image": "images/freight-margin-recovery-and-logistics-cost-efficiency-diagnostic.png",
+    "alt": "Freight Margin Recovery and Logistics Cost Efficiency Diagnostic",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "freight-margin-recovery-and-logistics-cost-efficiency-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Strategic Planning",
+      "Contract Negotiation",
+      "Cost Management",
+      "Logistics Management"
+    ],
+    "ref": 22
+  },
+  {
+    "title": "Indirect Tax Risk and Opportunity Mapping Engine",
+    "description": "This diagnostic evaluates exposure to indirect taxes (VAT, GST, sales/use tax) across business units and geographies, identifies compliance risks, and pinpoints refund opportunities or rate misapplications.",
+    "image": "images/indirect-tax-risk-and-opportunity-mapping-engine.png",
+    "alt": "Indirect Tax Risk and Opportunity Mapping Engine",
+    "category": "AI",
+    "industry": "Finance",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "indirect-tax-risk-and-opportunity-mapping-engine.ejs",
+    "consultingSkills": [
+      "Tax Compliance",
+      "Risk Identification",
+      "Opportunity Identification",
+      "Process Automation",
+      "Advisory"
+    ],
+    "ref": 23
+  },
+  {
+    "title": "Integrated Cost-to-Serve Optimization Playbook",
+    "description": "The Integrated Cost-to-Serve Optimization Playbook expands upon the traditional cost-to-serve framework by not only identifying service cost and customer profitability insights, but also integrating those insights across pricing, supply chain, sales, and product strategies. This diagnostic enables cross-functional alignment to reshape service models, re-segment customers, and unlock structural margin improvement through a coordinated set of operational and commercial levers.",
+    "image": "images/integrated-cost-to-serve-optimization-playbook.png",
+    "alt": "Integrated Cost-to-Serve Optimization Playbook",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "integrated-cost-to-serve-optimization-playbook.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Strategic Planning",
+      "Supply Chain Management",
+      "Pricing Strategy",
+      "Customer Segmentation"
+    ],
+    "ref": 24
+  },
+  {
+    "title": "Inventory Execution Excellence Framework",
+    "description": "The Inventory Execution Excellence Framework provides a structured, end-to-end roadmap for implementing inventory optimisation initiatives. It moves beyond diagnostics and into tactical execution, detailing how to translate insights into measurable impact across operations, procurement, planning, and warehousing. This framework ensures that inventory decisions are operationalized in a disciplined, data-driven manner across the value chain.",
+    "image": "images/inventory-execution-excellence-framework.png",
+    "alt": "Inventory Execution Excellence Framework",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "inventory-execution-excellence-framework.ejs",
+    "consultingSkills": [
+      "Strategy alignment",
+      "SKU segmentation and classification",
+      "Process mapping",
+      "Policy and parameter redesign",
+      "System and workflow changes",
+      "Cross-functional governance and change management"
+    ],
+    "ref": 25
+  },
+  {
+    "title": "Inventory Optimisation",
+    "description": "Inventory Optimisation is a diagnostic used to assess the efficiency and balance of inventory levels across a company's supply chain. It identifies overstock, understock, and slow-moving items, and provides actionable recommendations to reduce carrying costs while improving product availability and service levels.",
+    "image": "images/inventory-optimisation.png",
+    "alt": "Inventory Optimisation",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "inventory-optimisation.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Supply Chain Management",
+      "Inventory Management",
+      "Operational Efficiency",
+      "Strategic Planning"
+    ],
+    "ref": 26
+  },
+  {
+    "title": "Lean G&A Performance Benchmark",
+    "description": "The Lean G&A Performance Benchmark assesses the cost-effectiveness and structural efficiency of General & Administrative (G&A) functions such as Finance, HR, IT, Legal, and Procurement. It benchmarks a company\u2019s G&A spend and staffing levels against industry peers and best-in-class operators to identify cost-saving opportunities, efficiency gaps, and areas for process automation or organizational redesign.",
+    "image": "images/lean-g-a-performance-benchmark.png",
+    "alt": "Lean G&A Performance Benchmark",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "lean-g-a-performance-benchmark.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Benchmarking",
+      "Process Mapping",
+      "Cost Reduction",
+      "Operational Efficiency"
+    ],
+    "ref": 27
+  },
+  {
+    "title": "Localized Market Penetration and Growth Opportunity Diagnostic",
+    "description": "The Localized Market Penetration and Growth Opportunity Diagnostic evaluates a company\u2019s market share and brand presence within specific geographic trade areas to identify underserved regions, competitive dynamics, and whitespace opportunities for expansion. By analyzing demographic, competitive, and transactional data at the local level, the diagnostic uncovers granular growth opportunities that align with customer demand and brand positioning.",
+    "image": "images/localized-market-penetration-and-growth-opportunity-diagnostic.png",
+    "alt": "Localized Market Penetration and Growth Opportunity Diagnostic",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Market Validation",
+    "link": "localized-market-penetration-and-growth-opportunity-diagnostic.ejs",
+    "consultingSkills": [
+      "Market Analysis",
+      "Data Analysis",
+      "Strategic Planning",
+      "Geospatial Analysis",
+      "Business Growth Strategy"
+    ],
+    "ref": 28
+  },
+  {
+    "title": "Microeconomics of Growth and Location ROI Modeling",
+    "description": "The Microeconomics of Growth and Location ROI Modeling diagnostic assesses the financial viability of expansion opportunities at a unit level by modeling fixed and variable costs, contribution margins, break-even points, and payback periods. It enables data-backed decisions about where and how to grow \u2014 whether opening new stores, launching franchises, or expanding service coverage \u2014 by quantifying expected unit profitability and investment returns.",
+    "image": "images/microeconomics-of-growth-and-location-roi-modeling.png",
+    "alt": "Microeconomics of Growth and Location ROI Modeling",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Market Validation",
+    "link": "microeconomics-of-growth-and-location-roi-modeling.ejs",
+    "consultingSkills": [
+      "Financial Modeling",
+      "Data Analysis",
+      "Market Research",
+      "Strategic Planning",
+      "Decision Making"
+    ],
+    "ref": 29
+  },
+  {
+    "title": "Network Footprint Optimization Model",
+    "description": "The Network Footprint Optimization Model is a diagnostic framework used to evaluate the current configuration of manufacturing plants and distribution centers. It identifies opportunities to consolidate, relocate, or resize facilities in order to reduce logistics costs, improve service levels, and align capacity with demand. This model is critical for optimizing total landed cost, improving responsiveness, and simplifying supply chain complexity.",
+    "image": "images/network-footprint-optimization-model.png",
+    "alt": "Network Footprint Optimization Model",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "network-footprint-optimization-model.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Strategic Planning",
+      "Supply Chain Management",
+      "Operational Efficiency",
+      "Cost Optimization"
+    ],
+    "ref": 30
+  },
+  {
+    "title": "New Store Ramp Curve Optimization & Uplift Strategy Model",
+    "description": "The New Store Ramp Curve Optimization & Uplift Strategy Model is a diagnostic that evaluates the ramp-up performance of newly opened stores and identifies strategies to accelerate time-to-profitability. It benchmarks actual ramp curves against expected performance, isolates operational and marketing drivers of uplift, and guides targeted interventions to close gaps, optimize rollout plans, and replicate early success across formats and regions.",
+    "image": "images/new-store-ramp-curve-optimization-uplift-strategy-model.png",
+    "alt": "New Store Ramp Curve Optimization & Uplift Strategy Model",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Go-to-Market Plan",
+    "link": "new-store-ramp-curve-optimization-uplift-strategy-model.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Strategic Planning",
+      "Performance Benchmarking",
+      "Operational Optimization",
+      "Marketing Strategy"
+    ],
+    "ref": 31
+  },
+  {
+    "title": "Operational Throughput and Manufacturing Efficiency Dashboard",
+    "description": "The Operational Throughput and Manufacturing Efficiency Dashboard is a diagnostic that evaluates core manufacturing KPIs to identify inefficiencies, bottlenecks, and areas of operational waste. It provides a comprehensive view of plant performance across dimensions such as throughput, yield, downtime, cycle time, and labor productivity, enabling data-driven decisions for improving output, reducing costs, and increasing asset utilization.",
+    "image": "images/operational-throughput-and-manufacturing-efficiency-dashboard.png",
+    "alt": "Operational Throughput and Manufacturing Efficiency Dashboard",
+    "category": "AI",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "ALL",
+    "link": "operational-throughput-and-manufacturing-efficiency-dashboard.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Operational Efficiency",
+      "Lean Manufacturing",
+      "Capacity Planning",
+      "Performance Benchmarking"
+    ],
+    "ref": 32
+  },
+  {
+    "title": "Organizational Leverage Diagnostic",
+    "description": "The Organizational Leverage Diagnostic evaluates the effectiveness of a company\u2019s management structure by analyzing the \u201cspans\u201d (number of direct reports per manager) and \u201clayers\u201d (hierarchical depth) across the organization. It identifies areas of organizational bloat, managerial bottlenecks, and inefficient reporting relationships, with the goal of improving agility, reducing costs, and aligning talent with business priorities.",
+    "image": "images/4-organizational-leverage-diagnostic.png",
+    "alt": "Organizational Leverage Diagnostic",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "organizational-leverage-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Change Management",
+      "Benchmarking",
+      "Organizational Design",
+      "Project Management"
+    ],
+    "ref": 33
+  },
+  {
+    "title": "Predictive Customer Lifetime Value (CLV) and Retention Strategy Engine",
+    "description": "The Predictive Customer Lifetime Value (CLV) and Retention Strategy Engine models the future value of each customer by analyzing historical behaviors, transaction patterns, and engagement signals. It enables segmentation of customers by long-term value and drives targeted retention, reactivation, and personalization strategies. This diagnostic helps organizations shift from reactive customer management to proactive, value-driven engagement.",
+    "image": "images/predictive-customer-lifetime-value-clv-and-retention-strategy-engine.png",
+    "alt": "Predictive Customer Lifetime Value (CLV) and Retention Strategy Engine",
+    "category": "AI",
+    "industry": "Retail",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "Go-to-Market Plan",
+    "link": "predictive-customer-lifetime-value-clv-and-retention-strategy-engine.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Customer Segmentation",
+      "Predictive Modelling",
+      "Customer Retention Strategies",
+      "ROI Estimation"
+    ],
+    "ref": 34
+  },
+  {
     "title": "Pricing Leakage and Discount Compliance Diagnostic",
-    "description": "Data-driven diagnostic to support enterprise value creation. Tailored execution guidance.",
+    "description": "The Pricing Leakage and Discount Compliance Diagnostic identifies where margin is lost due to inconsistent pricing, unauthorized discounts, under-enforced policies, and pricing exceptions that are not value-justified. It provides a clear view of how pricing decisions deviate from policy across sales teams, regions, and customer segments \u2014 and recommends controls to tighten revenue capture and reduce margin erosion.",
     "image": "images/pricing-leakage-and-discount-compliance-diagnostic.png",
     "alt": "Pricing Leakage and Discount Compliance Diagnostic",
-    "category": "AIHUMAN",
-    "industry": "All",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Go-to-Market Plan",
+    "link": "pricing-leakage-and-discount-compliance-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Financial Analysis",
+      "Policy Analysis",
+      "Sales Strategy",
+      "Process Improvement"
+    ],
+    "ref": 35
+  },
+  {
+    "title": "Pricing Power and ASP Benchmark Diagnostic",
+    "description": "The Pricing Power and ASP Benchmark Diagnostic evaluates a company\u2019s average selling price (ASP) across products, customer segments, and channels, and compares performance to competitors and market expectations. It identifies pricing strengths and weaknesses, analyzes drivers of ASP changes over time, and supports data-backed pricing strategy design. The diagnostic reveals how well a company is monetizing its offering and whether it is leaving value on the table.",
+    "image": "images/pricing-power-and-asp-benchmark-diagnostic.png",
+    "alt": "Pricing Power and ASP Benchmark Diagnostic",
+    "category": "AI",
+    "industry": "ALL",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "pricing-power-and-asp-benchmark-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Pricing Strategy",
+      "Competitive Analysis",
+      "Financial Modeling",
+      "Business Intelligence"
+    ],
+    "ref": 36
+  },
+  {
+    "title": "Resilience and Business Continuity Risk Exposure Diagnostic",
+    "description": "The Resilience and Business Continuity Risk Exposure Diagnostic evaluates an organization\u2019s preparedness for operational disruptions, external shocks, and business continuity challenges. It identifies critical vulnerabilities across supply chain, technology, facilities, and workforce operations, and models the potential financial and operational impact of various disruption scenarios. The diagnostic supports enterprise-wide risk mitigation planning and investment prioritization.",
+    "image": "images/resilience-and-business-continuity-risk-exposure-diagnostic.png",
+    "alt": "Resilience and Business Continuity Risk Exposure Diagnostic",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Ideas",
+    "link": "resilience-and-business-continuity-risk-exposure-diagnostic.ejs",
+    "consultingSkills": [
+      "Risk Assessment",
+      "Business Continuity Planning",
+      "Operational Resilience",
+      "Supply Chain Management",
+      "Financial Impact Analysis"
+    ],
+    "ref": 37
+  },
+  {
+    "title": "Retail Network Growth and Regional Sales Benchmark Diagnostic",
+    "description": "The Retail Network Growth and Regional Sales Benchmark Diagnostic evaluates sales performance and growth trends at the store and regional levels, identifying high-performing markets, underperforming units, and areas for resource reallocation. It provides a comparative lens across locations, geographies, and formats, enabling smarter territory planning, performance management, and investment prioritization across a retail network.",
+    "image": "images/retail-network-growth-and-regional-sales-benchmark-diagnostic.png",
+    "alt": "Retail Network Growth and Regional Sales Benchmark Diagnostic",
+    "category": "AI + Human",
+    "industry": "Retail",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "Market Validation",
+    "link": "retail-network-growth-and-regional-sales-benchmark-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Market Research",
+      "Strategic Planning",
+      "Performance Management",
+      "Investment Prioritization"
+    ],
+    "ref": 38
+  },
+  {
+    "title": "Revenue Expansion and Offer Mix Optimization Engine",
+    "description": "The Revenue Expansion and Offer Mix Optimization Engine identifies opportunities to increase average order value, customer lifetime value, and category share by optimizing cross-sell, up-sell, bundling, and product mix strategies. It analyzes historical purchase patterns, segment preferences, and attachment rates to craft tailored commercial strategies that drive incremental revenue and enhance customer experience.",
+    "image": "images/revenue-expansion-and-offer-mix-optimization-engine.png",
+    "alt": "Revenue Expansion and Offer Mix Optimization Engine",
+    "category": "AI",
+    "industry": "Retail",
+    "solutionArea": "Customer Analytics",
+    "lifecycleStage": "Market Validation",
+    "link": "revenue-expansion-and-offer-mix-optimization-engine.ejs",
+    "consultingSkills": [
+      "Analyzing Transaction and SKU Co-Purchase Data",
+      "Segmenting Customers by Purchase Behavior",
+      "Identifying High-Potential Cross-Sell and Up-Sell Paths",
+      "Optimizing Product Mix and Assortment Strategy",
+      "Testing Pricing, Placement, and Messaging Levers"
+    ],
+    "ref": 39
+  },
+  {
+    "title": "SKU Margin Intelligence and Rationalization Framework",
+    "description": "The SKU Margin Intelligence and Rationalization Framework is a diagnostic tool that assesses the profitability, velocity, and strategic relevance of individual SKUs across categories and channels. It identifies unprofitable or redundant products, highlights high-margin growth candidates, and guides data-driven SKU rationalization or line extensions. This diagnostic empowers organizations to simplify product portfolios, reduce working capital, and enhance category profitability.",
+    "image": "images/sku-margin-intelligence-and-rationalization-framework.png",
+    "alt": "SKU Margin Intelligence and Rationalization Framework",
+    "category": "AI",
+    "industry": "Retail",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "sku-margin-intelligence-and-rationalization-framework.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Financial Analysis",
+      "Operational Efficiency",
+      "Strategic Planning",
+      "Project Management"
+    ],
+    "ref": 40
+  },
+  {
+    "title": "Strategic CapEx Planning Blueprint",
+    "description": "The Strategic CapEx Planning Blueprint is a diagnostic and planning framework that enables organizations to forecast capital expenditures with greater accuracy, alignment, and financial discipline. It helps companies evaluate past CapEx trends, prioritize future investments, and link capital spending plans directly to business strategy, ROI thresholds, and capacity needs.",
+    "image": "images/strategic-capex-planning-blueprint.png",
+    "alt": "Strategic CapEx Planning Blueprint",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Finance",
+    "lifecycleStage": "Scoping",
+    "link": "strategic-capex-planning-blueprint.ejs",
+    "consultingSkills": [
+      "Financial Planning",
+      "Strategic Planning",
+      "Data Analysis",
+      "Project Management",
+      "Business Strategy"
+    ],
+    "ref": 41
+  },
+  {
+    "title": "Strategic Growth Benchmarking and Peer Positioning Framework",
+    "description": "The Strategic Growth Benchmarking and Peer Positioning Framework evaluates a company\u2019s revenue and customer growth performance relative to direct competitors and best-in-class peers. It breaks down growth into its core drivers \u2014 volume, price, mix, and channel expansion \u2014 and reveals how well the business is scaling compared to the market. The framework enables executive teams to understand their relative growth story and focus on replicable drivers of outperformers.",
+    "image": "images/strategic-growth-benchmarking-and-peer-positioning-framework.png",
+    "alt": "Strategic Growth Benchmarking and Peer Positioning Framework",
+    "category": "AI + Human",
+    "industry": "ALL",
     "solutionArea": "Value Creation",
-    "link": "pricing-leakage-and-discount-compliance-diagnostic.html"
+    "lifecycleStage": "Scoping",
+    "link": "strategic-growth-benchmarking-and-peer-positioning-framework.ejs",
+    "consultingSkills": [
+      "Analytical skills",
+      "Strategic thinking",
+      "Financial analysis",
+      "Data interpretation",
+      "Communication skills"
+    ],
+    "ref": 42
+  },
+  {
+    "title": "Strategic Sourcing and Supplier Spend Diagnostic",
+    "description": "The Strategic Sourcing and Supplier Spend Diagnostic is designed to evaluate an organization\u2019s external spend profile, vendor landscape, and procurement practices. It identifies opportunities to consolidate suppliers, renegotiate contracts, reduce maverick spend, and increase compliance and savings through more strategic sourcing. The diagnostic also highlights how procurement can shift from tactical buying to a value-adding strategic function.",
+    "image": "images/strategic-sourcing-and-supplier-spend-diagnostic.png",
+    "alt": "Strategic Sourcing and Supplier Spend Diagnostic",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "strategic-sourcing-and-supplier-spend-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Strategic Planning",
+      "Negotiation",
+      "Project Management",
+      "Financial Analysis"
+    ],
+    "ref": 43
+  },
+  {
+    "title": "Supply Chain Risk and Trade Exposure Assessment",
+    "description": "The Supply Chain Risk and Trade Exposure Assessment evaluates the vulnerability of an organization\u2019s supply chain and procurement activities to external risks such as tariffs, geopolitical instability, trade regulations, supplier concentration, and logistics disruptions. It quantifies exposure to trade-related cost volatility and supply continuity risk, enabling proactive mitigation strategies and smarter sourcing decisions.",
+    "image": "images/supply-chain-risk-and-trade-exposure-assessment.png",
+    "alt": "Supply Chain Risk and Trade Exposure Assessment",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Operational Optimisation",
+    "lifecycleStage": "Scoping",
+    "link": "supply-chain-risk-and-trade-exposure-assessment.ejs",
+    "consultingSkills": [
+      "Risk Assessment",
+      "Supply Chain Management",
+      "Trade Compliance",
+      "Procurement Strategy",
+      "Data Analysis"
+    ],
+    "ref": 44
+  },
+  {
+    "title": "Total Workforce Cost and Productivity Optimization Diagnostic",
+    "description": "The Total Workforce Cost and Productivity Optimization Diagnostic provides a holistic view of all labor-related costs \u2014 including full-time employees, part-time staff, contingent workers, and outsourced roles \u2014 and links them to output and value creation. It identifies inefficiencies, overstaffed functions, underutilized skills, and opportunities for labor cost reduction or workforce strategy realignment.",
+    "image": "images/total-workforce-cost-and-productivity-optimization-diagnostic.png",
+    "alt": "Total Workforce Cost and Productivity Optimization Diagnostic",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Workforce Talent",
+    "lifecycleStage": "Scoping",
+    "link": "total-workforce-cost-and-productivity-optimization-diagnostic.ejs",
+    "consultingSkills": [
+      "Data Analysis",
+      "Workforce Planning",
+      "Cost Optimization",
+      "Productivity Improvement",
+      "Strategic Planning"
+    ],
+    "ref": 45
+  },
+  {
+    "title": "White Space Opportunity Mapping and Demand Gap Diagnostic",
+    "description": "The White Space Opportunity Mapping and Demand Gap Diagnostic identifies untapped market potential by analyzing current market coverage, customer segments, and unmet demand. It helps organizations discover new customer groups, geographies, product adjacencies, or use cases where their brand or offering is currently underpenetrated \u2014 serving as a foundation for future growth strategies.",
+    "image": "images/white-space-opportunity-mapping-and-demand-gap-diagnostic.png",
+    "alt": "White Space Opportunity Mapping and Demand Gap Diagnostic",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Value Creation",
+    "lifecycleStage": "Ideas",
+    "link": "white-space-opportunity-mapping-and-demand-gap-diagnostic.ejs",
+    "consultingSkills": [
+      "Market Analysis",
+      "Strategic Planning",
+      "Data Analysis",
+      "Competitor Analysis",
+      "Opportunity Identification"
+    ],
+    "ref": 46
+  },
+  {
+    "title": "Workforce Sentiment Intelligence Engine",
+    "description": "The Workforce Sentiment Intelligence Engine is a diagnostic designed to measure and interpret employee sentiment using both structured (e.g., surveys) and unstructured (e.g., comments, chat logs, social platforms) data. It uncovers hidden drivers of engagement, burnout, loyalty, and dissatisfaction, providing organizations with a real-time, data-driven view of workforce morale and cultural health.",
+    "image": "images/workforce-sentiment-intelligence-engine.png",
+    "alt": "Workforce Sentiment Intelligence Engine",
+    "category": "AI + Human",
+    "industry": "ALL",
+    "solutionArea": "Workforce Talent",
+    "lifecycleStage": "ALL",
+    "link": "workforce-sentiment-intelligence-engine.ejs",
+    "consultingSkills": [
+      "Data Collection",
+      "Natural Language Processing",
+      "Demographic Analysis",
+      "Benchmarking",
+      "Correlation Analysis"
+    ],
+    "ref": 47
   }
 ]
 

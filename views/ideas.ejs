@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+<section class="section">
+  <div class="container">
+    <h2>Ideas in Product Stage: Ideas</h2>
+    <p class="subtitle">These ideas are at the early stage of their lifecycle.</p>
+
+    <% if (ideas.length === 0) { %>
+      <p>No ideas found.</p>
+    <% } else { %>
+      <table class="table is-fullwidth is-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Benefit</th>
+            <th>Industry</th>
+            <th>Solution Area</th>
+            <th>Category</th>
+            <th>Submitted By</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% ideas.forEach(idea => { %>
+            <tr>
+              <td><%= idea.title %></td>
+              <td><%= idea.description %></td>
+              <td><%= idea.benefit %></td>
+              <td><%= idea.industry %></td>
+              <td><%= idea.solution_area %></td>
+              <td><%= idea.category %></td>
+              <td><%= idea.created_by %></td>
+              <td><%= idea.create_date %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

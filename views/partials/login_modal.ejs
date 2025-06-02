@@ -62,22 +62,20 @@ function checkLoginStatus() {
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  localStorage.setItem("loggedIn", "true");
-  closeLoginModal();
-  checkLoginStatus();
-});
-
-window.onload = checkLoginStatus;
-
-document.getElementById('loginForm').addEventListener('submit', function (e) {
-  e.preventDefault();
   const data = {
     email: this.elements['email'].value,
     password: this.elements['password'].value
   };
-  console.log('Login data:', data);
-  alert('Login initiated. Backend not yet connected.');
-  closeLoginModal();
+  fetch('/submit-login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    localStorage.setItem("loggedIn", "true");
+    closeLoginModal();
+    checkLoginStatus();
+  }).catch(err => alert('Login failed: ' + err));
 });
+
 
 </script>

@@ -15,3 +15,24 @@
       </form>
     </div>
   </div>
+
+  <script>
+document.getElementById('profileForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const data = {
+    firstName: this.elements['firstName'].value,
+    surname: this.elements['surname'].value,
+    company: this.elements['company'].value,
+    email: this.elements['email'].value,
+    phone: this.elements['phone'].value
+  };
+  fetch('/submit-profile', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    alert('Profile saved');
+    closeProfileModal();
+  }).catch(err => alert('Profile save failed: ' + err));
+});
+</script>

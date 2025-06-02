@@ -1,105 +1,137 @@
 <%- include('partials/header') %>
 
-  <div class="container" style="margin: 40px auto;">
-    <h2>Submit a New Product Idea</h2>
+<div class="container" style="margin: 40px auto;">
+  <h2>Submit a New Product Idea</h2>
 
-    <form id="ideaForm">
-      <label for="ideaTitle">Title:</label>
-      <input type="text" id="ideaTitle" name="ideaTitle" required />
+  <form id="ideaForm">
+    <label for="ideaTitle">Title:</label>
+    <input type="text" id="ideaTitle" name="ideaTitle" required />
 
-      <label for="ideaDescription">Description:</label>
-      <textarea id="ideaDescription" name="ideaDescription" rows="4" required></textarea>
+    <label for="ideaDescription">Description:</label>
+    <textarea id="ideaDescription" name="ideaDescription" rows="4" required></textarea>
 
-      <label for="ideaBenefit">What's the Business Value of this idea:</label>
-      <textarea id="ideaBenefit" name="ideaBenefit" rows="4" required></textarea>
+    <label for="ideaBenefit">What's the Business Value of this idea:</label>
+    <textarea id="ideaBenefit" name="ideaBenefit" rows="4" required></textarea>
 
-      <label for="ideaAlliances">Are there any recommended products or other companies to work with:</label>
-      <textarea id="ideaAlliances" name="ideaAlliances" rows="4" required></textarea>
+    <label for="ideaAlliances">Are there any recommended products or other companies to work with:</label>
+    <textarea id="ideaAlliances" name="ideaAlliances" rows="4" required></textarea>
 
-      <div class="filter-bar">
-        <div class="filter-group">
-            <label for="industryFilter">Industry:</label>
-            <select id="industryFilter" name="industryFilter" class="filter-select" onchange="handleOtherSelection(this)">
-                <option value="">Select</option>
-                <option value="Finance">Finance</option>
-                <option value="Retail">Retail</option>
-                <option value="Healthcare">Healthcare</option>
-                <option value="Technology">Technology</option>
-                <option value="Other">Other</option>
-            </select>
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label for="industryFilter">Industry:</label>
+        <select id="industryFilter" name="industryFilter" class="filter-select" onchange="handleOtherSelection(this)">
+          <% industries.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
+        </select>
 
-            <div id="otherIndustryContainer" style="margin-top: 8px; display: none;">
-                <label for="otherIndustry">Please specify:</label>
-                <input type="text" id="otherIndustry" name="otherIndustry" class="filter-select" />
-            </div>
-        </div>
-
-
-        <div class="filter-group">
-          <label for="solutionFilter">Solution Area:</label>
-          <select id="solutionFilter" name="solutionFilter" class="filter-select">
-            <option value="">Select</option>
-            <option value="Finance">Finance</option>
-            <option value="ESG">ESG</option>
-            <option value="Technology">Technology</option>
-            <option value="Value Creation">Value Creation</option>
-            <option value="Workforce Talent">Workforce & Talent</option>
-            <option value="Operational Optimisation">Operational Optimisation</option>
-            <option value="Customer Analytics">Customer Analytics</option>
-            <option value="Other">Other</option>
-          </select>
-
-            <div id="otherSolutionContainer" style="margin-top: 8px; display: none;">
-                <label for="otherSolution">Please specify:</label>
-                <input type="text" id="otherSolution" name="otherSolution" class="filter-select" />
-            </div>
-        
-        </div>
-
-        <div class="filter-group">
-          <label for="categoryFilter">Category:</label>
-          <select id="categoryFilter" name="categoryFilter" class="filter-select">
-            <option value="">Select</option>
-            <option value="AI">AI</option>
-            <option value="AIHUMAN">AI + Human</option>
-            <option value="HUMANAI">Human with AI</option>
-          </select>
+        <div id="otherIndustryContainer" style="margin-top: 8px; display: none;">
+          <label for="otherIndustry">Please specify:</label>
+          <input type="text" id="otherIndustry" name="otherIndustry" class="filter-select" />
         </div>
       </div>
 
-      <div style="margin-top: 20px; text-align: right;">
-        <button type="submit" class="idea-button">Submit Idea</button>
+      <div class="filter-group">
+        <label for="solutionFilter">Solution Area:</label>
+        <select id="solutionFilter" name="solutionFilter" class="filter-select" onchange="handleOtherSolutionSelection(this)">
+          <% solutionareas.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
+        </select>
+
+        <div id="otherSolutionContainer" style="margin-top: 8px; display: none;">
+          <label for="otherSolution">Please specify:</label>
+          <input type="text" id="otherSolution" name="otherSolution" class="filter-select" />
+        </div>
       </div>
-    </form>
-  </div>
 
-  <script>
-    function handleOtherSelection(select) {
-      const otherContainer = document.getElementById('otherIndustryContainer');
-      const otherInput = document.getElementById('otherIndustry');
+      <div class="filter-group">
+        <label for="categoryFilter">Category:</label>
+        <select id="categoryFilter" name="categoryFilter" class="filter-select">
+          <% categories.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
+        </select>
+      </div>
+    </div>
 
-      if (select.value === 'Other') {
-        otherContainer.style.display = 'block';
-        otherInput.required = true;
-      } else {
-        otherContainer.style.display = 'none';
-        otherInput.required = false;
-        otherInput.value = '';
-      }
+    <label for="consultingSkills">Consulting Skills (comma-separated):</label>
+    <input type="text" id="consultingSkills" name="consultingSkills" placeholder="e.g. Skill A, Skill B" required />
+
+    <!-- Hidden lifecycle stage -->
+    <input type="hidden" id="lifecycleStage" name="lifecycleStage" value="Ideas" />
+
+    <div style="margin-top: 20px; text-align: right;">
+      <button type="submit" class="idea-button">Submit Idea</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function handleOtherSelection(select) {
+    const otherContainer = document.getElementById('otherIndustryContainer');
+    const otherInput = document.getElementById('otherIndustry');
+
+    if (select.value === 'Other') {
+      otherContainer.style.display = 'block';
+      otherInput.required = true;
+    } else {
+      otherContainer.style.display = 'none';
+      otherInput.required = false;
+      otherInput.value = '';
     }
+  }
 
-    document.getElementById('ideaForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+  function handleOtherSolutionSelection(select) {
+    const otherContainer = document.getElementById('otherSolutionContainer');
+    const otherInput = document.getElementById('otherSolution');
 
-      const title = document.getElementById('ideaTitle').value;
-      const desc = document.getElementById('ideaDescription').value;
+    if (select.value === 'Other') {
+      otherContainer.style.display = 'block';
+      otherInput.required = true;
+    } else {
+      otherContainer.style.display = 'none';
+      otherInput.required = false;
+      otherInput.value = '';
+    }
+  }
 
-      alert(`Idea Submitted!\nTitle: ${title}\nDescription: ${desc}`);
-      window.location.href = "index.html";
+  document.getElementById('ideaForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = {
+      ideaTitle: document.getElementById('ideaTitle').value,
+      ideaDescription: document.getElementById('ideaDescription').value,
+      ideaBenefit: document.getElementById('ideaBenefit').value,
+      ideaAlliances: document.getElementById('ideaAlliances').value,
+      industryFilter: document.getElementById('industryFilter').value,
+      otherIndustry: document.getElementById('otherIndustry').value,
+      solutionFilter: document.getElementById('solutionFilter').value,
+      otherSolution: document.getElementById('otherSolution').value,
+      categoryFilter: document.getElementById('categoryFilter').value,
+      lifecycleStage: 'Ideas',
+      consultingSkills: document.getElementById('consultingSkills').value.split(',').map(s => s.trim())
+    };
+
+    fetch('/submit-idea', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('Submission failed.');
+      return response.json();
+    })
+    .then(result => {
+      alert('Idea submitted successfully!');
+      window.location.href = '/home';
+    })
+    .catch(error => {
+      alert('Error submitting idea: ' + error.message);
     });
-  </script>
+  });
+</script>
 
 <%- include('partials/contact_modal') %>
 <%- include('partials/login_modal') %>
-
 <%- include('partials/footer') %>

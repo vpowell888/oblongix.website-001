@@ -21,15 +21,21 @@
     }
 
     document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const data = {
-        name: this.elements['name'].value,
-        email: this.elements['email'].value,
-        message: this.elements['message'].value
-      };
-      console.log('Contact message:', data);
-      alert('Your message has been sent. (Simulation — no backend connected)');
-      closeContactModal();
-    });
+  e.preventDefault();
+  const data = {
+    name: this.elements['name'].value,
+    email: this.elements['email'].value,
+    message: this.elements['message'].value
+  };
+  fetch('/submit-contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    alert('Message submitted');
+    closeContactModal();
+  }).catch(err => alert('Error submitting contact: ' + err));
+});
+
 
   </script>

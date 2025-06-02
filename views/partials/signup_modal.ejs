@@ -24,18 +24,23 @@
     }
 
     document.getElementById('signupForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const data = {
-        firstName: this.elements['firstName'].value,
-        surname: this.elements['surname'].value,
-        company: this.elements['company'].value,
-        email: this.elements['email'].value,
-        phone: this.elements['phone'].value
-      };
-      console.log('Signup data:', data);
-      alert('Signup initiated. Backend not yet connected.');
-      closeSignupModal();
-    });
+  e.preventDefault();
+  const data = {
+    firstName: this.elements['firstName'].value,
+    surname: this.elements['surname'].value,
+    company: this.elements['company'].value,
+    email: this.elements['email'].value,
+    phone: this.elements['phone'].value
+  };
+  fetch('/submit-signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    alert('Signup submitted');
+    closeSignupModal();
+  }).catch(err => alert('Signup failed: ' + err));
+});
 
     
 </script>

@@ -4,7 +4,7 @@
   <div class="container">
 
     <div class="idea-button-container">
-      <a href="submit-idea.html" class="idea-button">Submit New Product Idea</a>
+      <a href="/submit-idea" class="idea-button">Submit New Product Idea</a>
     </div>
 
     <h2>Explore Our AI Solutions</h2>
@@ -73,39 +73,61 @@
   document.addEventListener("DOMContentLoaded", () => {
     let currentFeedbackSolutionId = null;
 
+    const statusFilter = document.getElementById('statusFilter');
+    const industryFilter = document.getElementById('industryFilter');
+    const solutionFilter = document.getElementById('solutionFilter');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const cards = document.querySelectorAll('.solution-card');
+
     document.querySelectorAll('.solution-card').forEach(tile => {
       tile.addEventListener('click', (e) => {
         if (e.target.closest('.feedback-btn')) return;
 
         const link = tile.getAttribute('data-link');
         if (link) {
-          window.location.href = link;
+          window.location.href = `/diagnostic_pages?link=${encodeURIComponent(link)}`;
         }
       });
     });
 
-    
-    function applyFilter(category) {
-      const cards = document.querySelectorAll('.solution-card');
+    // Redirect for Product Stage == Ideas
+    statusFilter.addEventListener('change', function () {
+      const selected = this.value;
+      if (selected === 'Ideas') {
+        window.location.href = '/ideas';
+      } else {
+        applyFilters();
+      }
+    });
+
+    industryFilter.addEventListener('change', applyFilters);
+    solutionFilter.addEventListener('change', applyFilters);
+    categoryFilter.addEventListener('change', applyFilters);
+
+    function applyFilters() {
+      const statusVal = statusFilter.value;
+      const industryVal = industryFilter.value;
+      const solutionVal = solutionFilter.value;
+      const categoryVal = categoryFilter.value;
+
       cards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        if (category === 'ALL' || cardCategory === category) {
+        const matchesStatus = (statusVal === 'ALL' || card.getAttribute('data-status') === statusVal);
+        const matchesIndustry = (industryVal === 'ALL' || card.getAttribute('data-industry') === industryVal);
+        const matchesSolution = (solutionVal === 'ALL' || card.getAttribute('data-solution') === solutionVal);
+        const matchesCategory = (categoryVal === 'ALL' || card.getAttribute('data-category') === categoryVal);
+
+        if (matchesStatus && matchesIndustry && matchesSolution && matchesCategory) {
           card.classList.remove('hidden');
         } else {
           card.classList.add('hidden');
         }
       });
-      document.getElementById('categoryFilter').value = category;
     }
 
-    const params = new URLSearchParams(window.location.search);
-    const initialFilter = params.get('filter') || 'ALL';
-    applyFilter(initialFilter);
-
-    document.getElementById('categoryFilter').addEventListener('change', function () {
-      applyFilter(this.value);
-    });
+    // Initial load logic (optional, based on query params)
+    applyFilters();
   });
 </script>
+
 
 <%- include('partials/footer') %>
