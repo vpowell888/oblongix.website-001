@@ -1,0 +1,35 @@
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeContactModal()">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openContactModal() {
+      document.getElementById("contactModal").style.display = "block";
+    }
+
+    function closeContactModal() {
+      document.getElementById("contactModal").style.display = "none";
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = {
+        name: this.elements['name'].value,
+        email: this.elements['email'].value,
+        message: this.elements['message'].value
+      };
+      console.log('Contact message:', data);
+      alert('Your message has been sent. (Simulation — no backend connected)');
+      closeContactModal();
+    });
+
+  </script>

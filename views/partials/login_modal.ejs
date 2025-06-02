@@ -1,0 +1,83 @@
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+<script>
+      document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      localStorage.setItem("loggedIn", "true");
+
+      document.querySelector("#profileForm input[name='firstName']").value = "Test";
+      document.querySelector("#profileForm input[name='surname']").value = "User";
+      document.querySelector("#profileForm input[name='company']").value = "Oblongix";
+      document.querySelector("#profileForm input[name='email']").value = "test.user@example.com";
+      document.querySelector("#profileForm input[name='phone']").value = "1234567890";
+
+      closeLoginModal();
+      checkLoginStatus();
+    });
+
+    function checkLoginStatus() {
+      const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+      document.getElementById("profileIcon").style.display = isLoggedIn ? "inline-block" : "none";
+      document.getElementById("loginBtn").style.display = isLoggedIn ? "none" : "inline-block";
+      document.getElementById("logoutBtn").style.display = isLoggedIn ? "inline-block" : "none";
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      checkLoginStatus();
+    }
+
+    function openLoginModal() {
+      document.getElementById("loginModal").style.display = "block";
+    }
+
+    function closeLoginModal() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+    
+  function openProfileModal() {
+  document.getElementById("profileModal").style.display = "block";
+}
+
+function closeProfileModal() {
+  document.getElementById("profileModal").style.display = "none";
+}
+
+// Simulate login check (you’ll replace with real auth logic)
+function checkLoginStatus() {
+  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+  document.getElementById("profileIcon").style.display = isLoggedIn ? "inline-block" : "none";
+  document.getElementById("loginBtn").style.display = isLoggedIn ? "none" : "inline-block";
+}
+
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  localStorage.setItem("loggedIn", "true");
+  closeLoginModal();
+  checkLoginStatus();
+});
+
+window.onload = checkLoginStatus;
+
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const data = {
+    email: this.elements['email'].value,
+    password: this.elements['password'].value
+  };
+  console.log('Login data:', data);
+  alert('Login initiated. Backend not yet connected.');
+  closeLoginModal();
+});
+
+</script>

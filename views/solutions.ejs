@@ -1,0 +1,111 @@
+<%- include('partials/header') %>
+
+<section class="section">
+  <div class="container">
+
+    <div class="idea-button-container">
+      <a href="submit-idea.html" class="idea-button">Submit New Product Idea</a>
+    </div>
+
+    <h2>Explore Our AI Solutions</h2>
+    <p class="subtitle">Choose from a curated set of tools designed for AI-powered business transformation. Filter by criteria:</p>
+
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label for="statusFilter">Product Stage:</label>
+        <select id="statusFilter" class="filter-select">
+          <% lifecycleStages.forEach(stage => { %>
+            <option value="<%= stage.value %>"><%= stage.label %></option>
+          <% }); %>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="industryFilter">Industry:</label>
+        <select id="industryFilter" class="filter-select">
+          <% industries.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="solutionFilter">Solution Area:</label>
+        <select id="solutionFilter" class="filter-select">
+          <% solutionareas.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="categoryFilter">Category:</label>
+        <select id="categoryFilter" class="filter-select">
+          <% categories.forEach(item => { %>
+            <option value="<%= item.value %>"><%= item.label %></option>
+          <% }); %>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid-3" id="solutionsGrid">
+      <% solutions.forEach((item, index) => { %>
+        <div class="tile solution-card" 
+            data-category="<%= item.category %>" 
+            data-industry="<%= item.industry %>" 
+            data-solution="<%= item.solutionArea %>" 
+            data-link="<%= item.link %>">
+          <div class="tile-ref-number">#<%= index + 1 %></div>
+          <div class="card-content">
+            <h3><%= item.title %></h3>
+            <p><%= item.description %></p>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/contact_modal') %>
+<%- include('partials/login_modal') %>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentFeedbackSolutionId = null;
+
+    document.querySelectorAll('.solution-card').forEach(tile => {
+      tile.addEventListener('click', (e) => {
+        if (e.target.closest('.feedback-btn')) return;
+
+        const link = tile.getAttribute('data-link');
+        if (link) {
+          window.location.href = link;
+        }
+      });
+    });
+
+    
+    function applyFilter(category) {
+      const cards = document.querySelectorAll('.solution-card');
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'ALL' || cardCategory === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      document.getElementById('categoryFilter').value = category;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const initialFilter = params.get('filter') || 'ALL';
+    applyFilter(initialFilter);
+
+    document.getElementById('categoryFilter').addEventListener('change', function () {
+      applyFilter(this.value);
+    });
+  });
+</script>
+
+<%- include('partials/footer') %>
